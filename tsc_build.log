@@ -1,0 +1,794 @@
+server/auth/authService.ts(4,26): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../storage.js'?
+server/auth/authService.ts(5,33): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/storage.js'?
+server/auth/authService.ts(6,20): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/logger.js'?
+server/auth/authService.ts(7,39): error TS2307: Cannot find module '@shared/schema' or its corresponding type declarations.
+server/auth/authService.ts(494,32): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+server/auth/authService.ts(495,33): error TS2532: Object is possibly 'undefined'.
+server/auth/middleware.ts(2,23): error TS1484: 'TokenPayload' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/auth/middleware.ts(5,15): error TS2724: '"../../shared/schema.js"' has no exported member named 'User'. Did you mean 'users'?
+server/auth/routes.ts(1,18): error TS1484: 'Request' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/auth/routes.ts(1,27): error TS1484: 'Response' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/auth/routes.ts(1,37): error TS1484: 'NextFunction' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/auth/routes.ts(4,26): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../storage.js'?
+server/auth/routes.ts(5,29): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './authService.js'?
+server/auth/routes.ts(6,27): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './utils.js'?
+server/auth/routes.ts(7,78): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './middleware.js'?
+server/auth/routes.ts(8,136): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../../shared/schema.js'?
+server/auth/routes.ts(100,12): error TS7006: Parameter 'error' implicitly has an 'any' type.
+server/auth/utils.ts(2,10): error TS2724: '"../../shared/schema.js"' has no exported member named 'User'. Did you mean 'users'?
+server/config/index.ts(1,38): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './env.js'?
+server/config/index.ts(2,28): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './secrets.js'?
+server/config/index.ts(3,34): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './production.js'?
+server/config/production.ts(1,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './env.js'?
+server/config/production.ts(2,28): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './secrets.js'?
+server/config/secrets.ts(4,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './env.js'?
+server/database/config.ts(1,20): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/logger.js'?
+server/database/config.ts(2,33): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './storage.js'?
+server/database/config.ts(3,31): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './memory-storage.js'?
+server/database/config.ts(4,93): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './connection.js'?
+server/database/config.ts(14,28): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../storage.js'?
+server/database/connection.ts(4,20): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/logger.js'?
+server/database/connection.ts(5,25): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './schema.js'?
+server/database/memory-storage.ts(1,238): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './schema.js'?
+server/database/memory-storage.ts(2,220): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../../shared/schema.js'?
+server/database/memory-storage.ts(3,26): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../storage.js'?
+server/database/memory-storage.ts(6,46): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './type-adapters.js'?
+server/database/memory-storage.ts(416,69): error TS7006: Parameter 't' implicitly has an 'any' type.
+server/database/migrate.ts(6,20): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/logger.js'?
+server/database/storage.ts(2,29): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './connection.js'?
+server/database/storage.ts(3,20): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/logger.js'?
+server/database/storage.ts(14,8): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './sqlite-schema.js'?
+server/database/storage.ts(15,46): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './type-adapters.js'?
+server/database/storage.ts(29,8): error TS2307: Cannot find module '@shared/schema' or its corresponding type declarations.
+server/database/storage.ts(45,8): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './sqlite-schema.js'?
+server/database/storage.ts(46,26): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../storage.js'?
+server/database/storage.ts(47,31): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './memory-storage.js'?
+server/database/storage.ts(278,25): error TS7006: Parameter 'note' implicitly has an 'any' type.
+server/database/storage.ts(546,25): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+server/database/storage.ts(569,25): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+server/database/storage.ts(576,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(596,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(623,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(640,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(646,25): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+server/database/storage.ts(653,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(720,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(731,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(773,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(829,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(846,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(874,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(1137,25): error TS7006: Parameter 'note' implicitly has an 'any' type.
+server/database/storage.ts(1214,25): error TS7006: Parameter 'note' implicitly has an 'any' type.
+server/database/storage.ts(1224,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(1271,25): error TS7006: Parameter 'note' implicitly has an 'any' type.
+server/database/storage.ts(1313,28): error TS2345: Argument of type 'SQL<unknown> | undefined' is not assignable to parameter of type 'SQL<unknown>'.
+  Type 'undefined' is not assignable to type 'SQL<unknown>'.
+server/database/storage.ts(1367,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(1397,25): error TS7006: Parameter 'note' implicitly has an 'any' type.
+server/database/storage.ts(1409,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(1433,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(1460,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(1474,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(1483,25): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+server/database/storage.ts(1490,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(1520,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(1550,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(1592,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(1638,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(1652,9): error TS2393: Duplicate function implementation.
+server/database/storage.ts(1695,9): error TS2393: Duplicate function implementation.
+server/index.ts(1,33): error TS1484: 'Response' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/index.ts(1,43): error TS1484: 'NextFunction' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/index.ts(26,45): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './utils/monitoring.js'?
+server/index.ts(300,60): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './database/connection.js'?
+server/models/Collaboration.ts(1,28): error TS1484: 'Optional' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/models/Collaboration.ts(1,38): error TS1484: 'BelongsToGetAssociationMixin' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/models/Collaboration.ts(2,27): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/sequelize.js'?
+server/models/Collaboration.ts(3,22): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './User.js'?
+server/models/Collaboration.ts(4,22): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './File.js'?
+server/models/File.ts(1,28): error TS1484: 'Optional' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/models/File.ts(1,38): error TS1484: 'BelongsToGetAssociationMixin' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/models/File.ts(2,27): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/sequelize.js'?
+server/models/File.ts(3,22): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './User.js'?
+server/models/User.ts(1,28): error TS1484: 'Optional' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/models/User.ts(3,27): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/sequelize.js'?
+server/models/User.ts(44,10): error TS4114: This member must have an 'override' modifier because it overrides a member in the base class 'Model<UserAttributes, UserCreationAttributes>'.
+server/models/User.ts(46,12): error TS2790: The operand of a 'delete' operator must be optional.
+server/routes.ts(7,33): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './database/storage.js'?
+server/routes.ts(8,124): error TS2307: Cannot find module '@shared/types' or its corresponding type declarations.
+server/routes.ts(9,34): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './auth/routes.js'?
+server/routes.ts(10,73): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './auth/middleware.js'?
+server/routes.ts(12,36): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './utils/logger.js'?
+server/routes.ts(13,33): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './utils/response.js'?
+server/routes.ts(15,22): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './models/File.js'?
+server/routes.ts(16,22): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './models/User.js'?
+server/routes.ts(17,71): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './models/Collaboration.js'?
+server/routes/collaboration.ts(1,18): error TS1484: 'Request' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/routes/collaboration.ts(1,27): error TS1484: 'Response' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/routes/collaboration.ts(5,53): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../auth/middleware.js'?
+server/routes/collaboration.ts(6,33): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/response.js'?
+server/routes/collaboration.ts(7,33): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/storage.js'?
+server/routes/collaboration.ts(8,30): error TS2307: Cannot find module '@shared/schema' or its corresponding type declarations.
+server/routes/collaboration.ts(9,20): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/logger.js'?
+server/routes/collaboration.ts(97,42): error TS7006: Parameter 'u' implicitly has an 'any' type.
+server/routes/collaboration.ts(182,43): error TS7006: Parameter 'note' implicitly has an 'any' type.
+server/routes/collaboration.ts(192,15): error TS7006: Parameter 'note' implicitly has an 'any' type.
+server/routes/collaboration.ts(545,42): error TS7006: Parameter 'note' implicitly has an 'any' type.
+server/routes/health.ts(1,18): error TS1484: 'Request' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/routes/health.ts(1,27): error TS1484: 'Response' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/routes/health.ts(2,20): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/logger.js'?
+server/routes/health.ts(3,31): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/monitoring.js'?
+server/routes/health.ts(4,35): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/connection.js'?
+server/routes/health.ts(5,27): error TS2834: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.
+server/routes/notes.ts(1,18): error TS1484: 'Request' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/routes/notes.ts(1,27): error TS1484: 'Response' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/routes/notes.ts(3,33): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/storage.js'?
+server/routes/notes.ts(4,36): error TS2307: Cannot find module '@shared/schema' or its corresponding type declarations.
+server/routes/notes.ts(5,35): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../auth/middleware.js'?
+server/routes/notes.ts(6,33): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/response.js'?
+server/routes/notes.ts(7,20): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/logger.js'?
+server/routes/notes.ts(114,19): error TS2304: Cannot find name 'noteTags'.
+server/routes/notes.ts(116,30): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+server/routes/notes.ts(233,31): error TS2304: Cannot find name 'noteTags'.
+server/routes/notes.ts(234,19): error TS2304: Cannot find name 'noteTags'.
+server/routes/notes.ts(235,28): error TS2304: Cannot find name 'noteTags'.
+server/routes/notes.ts(235,55): error TS7006: Parameter 't' implicitly has an 'any' type.
+server/routes/notes.ts(241,55): error TS7006: Parameter 'n' implicitly has an 'any' type.
+server/routes/notes.ts(270,28): error TS7006: Parameter 'note' implicitly has an 'any' type.
+server/routes/notes.ts(271,15): error TS7022: 'noteTags' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
+server/routes/notes.ts(278,22): error TS2448: Block-scoped variable 'noteTags' used before its declaration.
+server/routes/notes.ts(278,44): error TS2448: Block-scoped variable 'noteTags' used before its declaration.
+server/routes/notes.ts(279,21): error TS2448: Block-scoped variable 'noteTags' used before its declaration.
+server/routes/notes.ts(332,48): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+server/routes/notes.ts(400,17): error TS2304: Cannot find name 'noteTags'.
+server/routes/notes.ts(401,19): error TS2304: Cannot find name 'noteTags'.
+server/routes/notes.ts(438,21): error TS2304: Cannot find name 'noteTags'.
+server/routes/notes.ts(440,32): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+server/routes/notes.ts(450,48): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+server/routes/notes.ts(497,15): error TS2304: Cannot find name 'noteTags'.
+server/routes/notes.ts(498,17): error TS2304: Cannot find name 'noteTags'.
+server/routes/notes.ts(646,48): error TS7006: Parameter 'acc' implicitly has an 'any' type.
+server/routes/notes.ts(646,53): error TS7006: Parameter 'stat' implicitly has an 'any' type.
+server/routes/notes.ts(687,9): error TS7022: 'noteTags' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
+server/routes/notes.ts(694,16): error TS2448: Block-scoped variable 'noteTags' used before its declaration.
+server/routes/notes.ts(694,38): error TS2448: Block-scoped variable 'noteTags' used before its declaration.
+server/routes/notes.ts(695,15): error TS2448: Block-scoped variable 'noteTags' used before its declaration.
+server/routes/settings.ts(1,18): error TS1484: 'Request' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/routes/settings.ts(1,27): error TS1484: 'Response' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/routes/settings.ts(5,35): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../auth/middleware.js'?
+server/routes/settings.ts(6,33): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/response.js'?
+server/routes/settings.ts(7,33): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/storage.js'?
+server/routes/settings.ts(8,37): error TS2307: Cannot find module '@shared/schema' or its corresponding type declarations.
+server/routes/settings.ts(9,20): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/logger.js'?
+server/routes/settings.ts(382,15): error TS2304: Cannot find name 'notes'.
+server/routes/settings.ts(383,19): error TS2304: Cannot find name 'notes'.
+server/routes/settings.ts(389,16): error TS2304: Cannot find name 'notes'.
+server/routes/settings.ts(390,13): error TS2304: Cannot find name 'sql'.
+server/routes/settings.ts(390,19): error TS2304: Cannot find name 'notes'.
+server/routes/settings.ts(398,16): error TS2304: Cannot find name 'notes'.
+server/routes/settings.ts(399,13): error TS2304: Cannot find name 'sql'.
+server/routes/settings.ts(399,19): error TS2304: Cannot find name 'notes'.
+server/routes/settings.ts(404,55): error TS2304: Cannot find name 'notes'.
+server/routes/tags.ts(1,18): error TS1484: 'Request' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/routes/tags.ts(1,27): error TS1484: 'Response' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/routes/tags.ts(3,33): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/storage.js'?
+server/routes/tags.ts(4,29): error TS2307: Cannot find module '@shared/schema' or its corresponding type declarations.
+server/routes/tags.ts(5,35): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../auth/middleware.js'?
+server/routes/tags.ts(6,33): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/response.js'?
+server/routes/tags.ts(7,20): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/logger.js'?
+server/routes/tags.ts(150,42): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(153,19): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(153,41): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(162,56): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(162,95): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(166,78): error TS7031: Binding element 'noteCount' implicitly has an 'any' type.
+server/routes/tags.ts(205,31): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+server/routes/tags.ts(208,21): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(209,25): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(291,18): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(291,41): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(293,12): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(407,15): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(408,17): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(447,55): error TS7006: Parameter 't' implicitly has an 'any' type.
+server/routes/tags.ts(510,40): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(513,17): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(513,39): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(516,33): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(528,17): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(528,39): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(531,15): error TS2304: Cannot find name 'noteTags'.
+server/routes/tags.ts(551,38): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+server/routes/tags.ts(557,30): error TS7006: Parameter 'sum' implicitly has an 'any' type.
+server/routes/tags.ts(557,35): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+server/routes/tags.ts(593,45): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+server/routes/tags.ts(608,50): error TS7006: Parameter 'userTag' implicitly has an 'any' type.
+server/routes/templates.ts(1,18): error TS1484: 'Request' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/routes/templates.ts(1,27): error TS1484: 'Response' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/routes/templates.ts(5,63): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../auth/middleware.js'?
+server/routes/templates.ts(6,33): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/response.js'?
+server/routes/templates.ts(7,33): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/storage.js'?
+server/routes/templates.ts(8,34): error TS2307: Cannot find module '@shared/schema' or its corresponding type declarations.
+server/routes/templates.ts(9,20): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/logger.js'?
+server/routes/templates.ts(491,31): error TS7006: Parameter 'template' implicitly has an 'any' type.
+server/routes/users.ts(6,10): error TS2305: Module '"../../shared/schema.js"' has no exported member 'insertUserSchema'.
+server/routes/users.ts(75,40): error TS2341: Property 'db' is private and only accessible within class 'DatabaseStorage'.
+server/routes/users.ts(94,37): error TS2341: Property 'db' is private and only accessible within class 'DatabaseStorage'.
+server/routes/users.ts(141,48): error TS2322: Type 'unknown' is not assignable to type 'Error | undefined'.
+server/routes/users.ts(156,34): error TS2341: Property 'db' is private and only accessible within class 'DatabaseStorage'.
+server/routes/users.ts(179,19): error TS2341: Property 'db' is private and only accessible within class 'DatabaseStorage'.
+server/routes/users.ts(222,41): error TS2322: Type 'unknown' is not assignable to type 'Error | undefined'.
+server/routes/users.ts(236,34): error TS2341: Property 'db' is private and only accessible within class 'DatabaseStorage'.
+server/routes/users.ts(255,30): error TS2339: Property 'notFound' does not exist on type 'typeof ResponseHandler'.
+server/routes/users.ts(261,50): error TS2322: Type 'unknown' is not assignable to type 'Error | undefined'.
+server/routes/users.ts(278,42): error TS2341: Property 'db' is private and only accessible within class 'DatabaseStorage'.
+server/routes/users.ts(300,41): error TS2341: Property 'db' is private and only accessible within class 'DatabaseStorage'.
+server/routes/users.ts(329,53): error TS2322: Type 'unknown' is not assignable to type 'Error | undefined'.
+server/routes/users.ts(345,34): error TS2341: Property 'db' is private and only accessible within class 'DatabaseStorage'.
+server/routes/users.ts(352,30): error TS2339: Property 'notFound' does not exist on type 'typeof ResponseHandler'.
+server/routes/users.ts(367,19): error TS2341: Property 'db' is private and only accessible within class 'DatabaseStorage'.
+server/routes/users.ts(384,49): error TS2322: Type 'unknown' is not assignable to type 'Error | undefined'.
+server/routes/users.ts(400,30): error TS2339: Property 'forbidden' does not exist on type 'typeof ResponseHandler'.
+server/routes/users.ts(408,25): error TS2341: Property 'db' is private and only accessible within class 'DatabaseStorage'.
+server/routes/users.ts(433,53): error TS2345: Argument of type '(() => SQL<unknown>) | PgColumn<{ name: "email"; tableName: "users"; dataType: "string"; columnType: "PgText"; data: string; driverParam: string; notNull: true; hasDefault: false; isPrimaryKey: false; isAutoincrement: false; ... 4 more ...; generated: undefined; }, {}, {}> | ... 21 more ... | undefined' is not assignable to parameter of type 'SQLWrapper | AnyColumn'.
+  Type 'undefined' is not assignable to type 'SQLWrapper | AnyColumn'.
+server/routes/users.ts(433,72): error TS2345: Argument of type '(() => SQL<unknown>) | PgColumn<{ name: "email"; tableName: "users"; dataType: "string"; columnType: "PgText"; data: string; driverParam: string; notNull: true; hasDefault: false; isPrimaryKey: false; isAutoincrement: false; ... 4 more ...; generated: undefined; }, {}, {}> | ... 21 more ... | undefined' is not assignable to parameter of type 'SQLWrapper | AnyColumn'.
+  Type 'undefined' is not assignable to type 'SQLWrapper | AnyColumn'.
+server/routes/users.ts(439,30): error TS2341: Property 'db' is private and only accessible within class 'DatabaseStorage'.
+server/routes/users.ts(472,48): error TS2322: Type 'unknown' is not assignable to type 'Error | undefined'.
+server/routes/users.ts(489,30): error TS2339: Property 'forbidden' does not exist on type 'typeof ResponseHandler'.
+server/routes/users.ts(498,38): error TS2341: Property 'db' is private and only accessible within class 'DatabaseStorage'.
+server/routes/users.ts(501,14): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(left: PgColumn<{ name: "id"; tableName: "users"; dataType: "string"; columnType: "PgVarchar"; data: string; driverParam: string; notNull: true; hasDefault: true; isPrimaryKey: true; isAutoincrement: false; ... 4 more ...; generated: undefined; }, {}, { ...; }>, right: string | SQLWrapper): SQL<...>', gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string | SQLWrapper'.
+      Type 'undefined' is not assignable to type 'string | SQLWrapper'.
+  Overload 2 of 3, '(left: Aliased<string | undefined>, right: string | SQLWrapper | undefined): SQL<unknown>', gave the following error.
+    Argument of type 'PgColumn<{ name: "id"; tableName: "users"; dataType: "string"; columnType: "PgVarchar"; data: string; driverParam: string; notNull: true; hasDefault: true; isPrimaryKey: true; isAutoincrement: false; ... 4 more ...; generated: undefined; }, {}, { ...; }>' is not assignable to parameter of type 'Aliased<string | undefined>'.
+      Type 'PgColumn<{ name: "id"; tableName: "users"; dataType: "string"; columnType: "PgVarchar"; data: string; driverParam: string; notNull: true; hasDefault: true; isPrimaryKey: true; isAutoincrement: false; ... 4 more ...; generated: undefined; }, {}, { ...; }>' is missing the following properties from type 'Aliased<string | undefined>': sql, fieldAlias
+  Overload 3 of 3, '(left: never, right: unknown): SQL<unknown>', gave the following error.
+    Argument of type 'PgColumn<{ name: "id"; tableName: "users"; dataType: "string"; columnType: "PgVarchar"; data: string; driverParam: string; notNull: true; hasDefault: true; isPrimaryKey: true; isAutoincrement: false; ... 4 more ...; generated: undefined; }, {}, { ...; }>' is not assignable to parameter of type 'never'.
+server/routes/users.ts(507,30): error TS2339: Property 'notFound' does not exist on type 'typeof ResponseHandler'.
+server/routes/users.ts(511,19): error TS2341: Property 'db' is private and only accessible within class 'DatabaseStorage'.
+server/routes/users.ts(517,14): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(left: PgColumn<{ name: "id"; tableName: "users"; dataType: "string"; columnType: "PgVarchar"; data: string; driverParam: string; notNull: true; hasDefault: true; isPrimaryKey: true; isAutoincrement: false; ... 4 more ...; generated: undefined; }, {}, { ...; }>, right: string | SQLWrapper): SQL<...>', gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string | SQLWrapper'.
+      Type 'undefined' is not assignable to type 'string | SQLWrapper'.
+  Overload 2 of 3, '(left: Aliased<string | undefined>, right: string | SQLWrapper | undefined): SQL<unknown>', gave the following error.
+    Argument of type 'PgColumn<{ name: "id"; tableName: "users"; dataType: "string"; columnType: "PgVarchar"; data: string; driverParam: string; notNull: true; hasDefault: true; isPrimaryKey: true; isAutoincrement: false; ... 4 more ...; generated: undefined; }, {}, { ...; }>' is not assignable to parameter of type 'Aliased<string | undefined>'.
+      Type 'PgColumn<{ name: "id"; tableName: "users"; dataType: "string"; columnType: "PgVarchar"; data: string; driverParam: string; notNull: true; hasDefault: true; isPrimaryKey: true; isAutoincrement: false; ... 4 more ...; generated: undefined; }, {}, { ...; }>' is missing the following properties from type 'Aliased<string | undefined>': sql, fieldAlias
+  Overload 3 of 3, '(left: never, right: unknown): SQL<unknown>', gave the following error.
+    Argument of type 'PgColumn<{ name: "id"; tableName: "users"; dataType: "string"; columnType: "PgVarchar"; data: string; driverParam: string; notNull: true; hasDefault: true; isPrimaryKey: true; isAutoincrement: false; ... 4 more ...; generated: undefined; }, {}, { ...; }>' is not assignable to parameter of type 'never'.
+server/scripts/migrate.ts(3,62): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/connection.js'?
+server/scripts/migrate.ts(4,20): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/logger.js'?
+server/scripts/seed.ts(1,25): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../storage.js'?
+server/scripts/seed.ts(2,34): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/sqlite-schema.js'?
+server/scripts/seed.ts(6,20): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/logger.js'?
+server/scripts/seed.ts(7,33): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/storage.js'?
+server/storage.ts(1,158): error TS2307: Cannot find module '@shared/types' or its corresponding type declarations.
+server/storage.ts(2,112): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './database/schema.js'?
+server/storage.ts(235,25): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+server/tests/globalSetup.ts(33,48): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/config.js'?
+server/tests/globalTeardown.ts(1,41): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/connection.js'?
+server/tests/integration.setup.ts(4,1): error TS2708: Cannot use namespace 'jest' as a value.
+server/tests/integration.setup.ts(33,57): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/monitoring.js'?
+server/tests/integration.setup.ts(54,40): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/sequelize.js'?
+server/tests/integration.setup.ts(65,49): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/sequelize.js'?
+server/tests/setup.ts(2,61): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/connection.js'?
+server/tests/setup.ts(3,22): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../models/User.js'?
+server/tests/setup.ts(4,22): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../models/File.js'?
+server/tests/setup.ts(5,31): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../models/Collaboration.js'?
+server/tests/setup.ts(6,20): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/logger.js'?
+server/tests/setup.ts(57,57): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../utils/monitoring.js'?
+server/tests/setup.ts(158,3): error TS2304: Cannot find name 'expect'.
+server/tests/setup.ts(159,3): error TS2304: Cannot find name 'expect'.
+server/tests/setup.ts(160,3): error TS2304: Cannot find name 'expect'.
+server/tests/setup.ts(164,3): error TS2304: Cannot find name 'expect'.
+server/tests/setup.ts(165,3): error TS2304: Cannot find name 'expect'.
+server/tests/setup.ts(166,3): error TS2304: Cannot find name 'expect'.
+server/tests/setup.ts(167,3): error TS2304: Cannot find name 'expect'.
+server/utils/health.ts(1,10): error TS1484: 'Request' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/utils/health.ts(1,19): error TS1484: 'Response' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/utils/health.ts(2,29): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/connection.js'?
+server/utils/health.ts(3,35): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/config.js'?
+server/utils/health.ts(4,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../config/env.js'?
+server/utils/health.ts(5,20): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './logger.js'?
+server/utils/logger.ts(4,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../config/env.js'?
+server/utils/monitoring.ts(1,20): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './logger.js'?
+server/utils/monitoring.ts(2,27): error TS2834: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.
+server/utils/monitoring.ts(412,52): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../database/connection.js'?
+server/utils/response.ts(1,10): error TS1484: 'Response' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+server/utils/response.ts(2,20): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './logger.js'?
+error TS18003: No inputs were found in config file 'D:/Kingeugine05-BrainwaveSync-main (4)/Kingeugine05-BrainwaveSync-main/client/tsconfig.node.json'. Specified 'include' paths were '["vite.config.js"]' and 'exclude' paths were '[]'.
+client/src/App.tsx(5,25): error TS2307: Cannot find module '@/components/ui/toaster' or its corresponding type declarations.
+client/src/App.tsx(6,33): error TS2307: Cannot find module '@/components/ui/tooltip' or its corresponding type declarations.
+client/src/App.tsx(7,60): error TS1484: 'LazyExoticComponent' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/App.tsx(7,81): error TS1484: 'FC' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/App.tsx(8,30): error TS2307: Cannot find module '@/components/SplashScreen' or its corresponding type declarations.
+client/src/App.tsx(9,27): error TS2307: Cannot find module '@/components/ErrorBoundary' or its corresponding type declarations.
+client/src/App.tsx(10,30): error TS2307: Cannot find module '@/components/OfflineIndicator' or its corresponding type declarations.
+client/src/App.tsx(11,31): error TS2307: Cannot find module '@/contexts/ThemeContext' or its corresponding type declarations.
+client/src/App.tsx(12,40): error TS2307: Cannot find module '@/contexts/HapticFeedbackContext' or its corresponding type declarations.
+client/src/App.tsx(13,64): error TS2307: Cannot find module '@/utils/mobileOptimizations' or its corresponding type declarations.
+client/src/App.tsx(14,38): error TS2307: Cannot find module '@/hooks/useMobilePerformance' or its corresponding type declarations.
+client/src/App.tsx(15,39): error TS2307: Cannot find module '@/components/ui/EnhancedNavigationBar' or its corresponding type declarations.
+client/src/App.tsx(18,74): error TS2307: Cannot find module '@/components/LazyBioneuralBeats' or its corresponding type declarations.
+client/src/App.tsx(19,66): error TS2307: Cannot find module '@/pages/notes' or its corresponding type declarations.
+client/src/App.tsx(24,69): error TS2307: Cannot find module '@/pages/settings' or its corresponding type declarations.
+client/src/App.tsx(25,68): error TS2307: Cannot find module '@/pages/offline' or its corresponding type declarations.
+client/src/App.tsx(26,65): error TS2307: Cannot find module '@/pages/not-found' or its corresponding type declarations.
+client/src/App.tsx(183,17): error TS7006: Parameter 'error' implicitly has an 'any' type.
+client/src/App.tsx(183,24): error TS7006: Parameter 'errorInfo' implicitly has an 'any' type.
+client/src/components/AudioControls.tsx(2,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+client/src/components/AudioControls.tsx(3,24): error TS2307: Cannot find module '@/components/ui/slider' or its corresponding type declarations.
+client/src/components/AudioControls.tsx(4,79): error TS2307: Cannot find module '@/components/ui/select' or its corresponding type declarations.
+client/src/components/AudioControls.tsx(5,23): error TS2307: Cannot find module '@/components/ui/input' or its corresponding type declarations.
+client/src/components/AudioControls.tsx(6,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+client/src/components/AudioControls.tsx(8,48): error TS2307: Cannot find module '@/components/PerformanceOptimizedPresetList' or its corresponding type declarations.
+client/src/components/AudioControls.tsx(9,42): error TS2307: Cannot find module '@/contexts/HapticFeedbackContext' or its corresponding type declarations.
+client/src/components/AudioControls.tsx(115,22): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/components/ErrorBoundary.tsx(1,28): error TS1484: 'ReactNode' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/ErrorBoundary.tsx(39,3): error TS4114: This member must have an 'override' modifier because it overrides a member in the base class 'Component<ErrorBoundaryProps, ErrorBoundaryState, any>'.
+client/src/components/ErrorBoundary.tsx(106,3): error TS4114: This member must have an 'override' modifier because it overrides a member in the base class 'Component<ErrorBoundaryProps, ErrorBoundaryState, any>'.
+client/src/components/ErrorBoundary.tsx(157,3): error TS4114: This member must have an 'override' modifier because it overrides a member in the base class 'Component<ErrorBoundaryProps, ErrorBoundaryState, any>'.
+client/src/components/ErrorBoundary.tsx(382,3): error TS4114: This member must have an 'override' modifier because it overrides a member in the base class 'Component<ErrorBoundaryProps, ErrorBoundaryState, any>'.
+client/src/components/ErrorReportingDashboard.tsx(5,10): error TS1484: 'ErrorLog' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/ErrorReportingDashboard.tsx(5,20): error TS1484: 'NetworkErrorLog' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/GamificationOverlay.tsx(4,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+client/src/components/GamificationOverlay.tsx(5,22): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+client/src/components/GamificationOverlay.tsx(6,33): error TS2307: Cannot find module '@/hooks/useGamification' or its corresponding type declarations.
+client/src/components/GamificationOverlay.tsx(99,31): error TS7006: Parameter 'notif' implicitly has an 'any' type.
+client/src/components/GamificationOverlay.tsx(228,33): error TS7006: Parameter 'user' implicitly has an 'any' type.
+client/src/components/GamificationOverlay.tsx(228,39): error TS7006: Parameter 'index' implicitly has an 'any' type.
+client/src/components/mobile/index.ts(30,16): error TS4023: Exported variable 'MobileForm' has or is using name 'MobileFormProps' from external module "D:/Kingeugine05-BrainwaveSync-main (4)/Kingeugine05-BrainwaveSync-main/client/src/components/mobile/MobileForm" but cannot be named.
+client/src/components/mobile/index.ts(30,28): error TS4023: Exported variable 'MobileInput' has or is using name 'MobileInputProps' from external module "D:/Kingeugine05-BrainwaveSync-main (4)/Kingeugine05-BrainwaveSync-main/client/src/components/mobile/MobileForm" but cannot be named.
+client/src/components/mobile/index.ts(30,41): error TS4023: Exported variable 'MobileTextArea' has or is using name 'MobileTextAreaProps' from external module "D:/Kingeugine05-BrainwaveSync-main (4)/Kingeugine05-BrainwaveSync-main/client/src/components/mobile/MobileForm" but cannot be named.
+client/src/components/mobile/index.ts(30,57): error TS4023: Exported variable 'MobileSelect' has or is using name 'MobileSelectProps' from external module "D:/Kingeugine05-BrainwaveSync-main (4)/Kingeugine05-BrainwaveSync-main/client/src/components/mobile/MobileForm" but cannot be named.
+client/src/components/mobile/index.ts(34,16): error TS4023: Exported variable 'MobileCard' has or is using name 'MobileCardProps' from external module "D:/Kingeugine05-BrainwaveSync-main (4)/Kingeugine05-BrainwaveSync-main/client/src/components/mobile/MobileCard" but cannot be named.
+client/src/components/mobile/index.ts(34,28): error TS4023: Exported variable 'MobileCardHeader' has or is using name 'MobileCardHeaderProps' from external module "D:/Kingeugine05-BrainwaveSync-main (4)/Kingeugine05-BrainwaveSync-main/client/src/components/mobile/MobileCard" but cannot be named.
+client/src/components/mobile/index.ts(34,46): error TS4023: Exported variable 'MobileCardContent' has or is using name 'MobileCardContentProps' from external module "D:/Kingeugine05-BrainwaveSync-main (4)/Kingeugine05-BrainwaveSync-main/client/src/components/mobile/MobileCard" but cannot be named.
+client/src/components/mobile/index.ts(34,65): error TS4023: Exported variable 'MobileCardActions' has or is using name 'MobileCardActionsProps' from external module "D:/Kingeugine05-BrainwaveSync-main (4)/Kingeugine05-BrainwaveSync-main/client/src/components/mobile/MobileCard" but cannot be named.
+client/src/components/mobile/MobileCard.tsx(2,18): error TS1484: 'PanInfo' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/mobile/MobileCard.tsx(2,27): error TS1484: 'Transition' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/mobile/MobileGestureHandler.tsx(149,27): error TS18048: 'touch' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(149,45): error TS18048: 'touch' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(150,29): error TS18048: 'touch' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(150,47): error TS18048: 'touch' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(169,47): error TS18048: 'touch' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(169,65): error TS18048: 'touch' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(197,16): error TS18048: 'touch' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(198,16): error TS18048: 'touch' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(213,29): error TS18048: 'touch' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(213,47): error TS18048: 'touch' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(219,80): error TS18048: 'touch' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(219,98): error TS18048: 'touch' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(230,51): error TS2345: Argument of type 'Touch | undefined' is not assignable to parameter of type 'Touch'.
+  Type 'undefined' is not assignable to type 'Touch'.
+client/src/components/mobile/MobileGestureHandler.tsx(233,18): error TS2532: Object is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(233,59): error TS2532: Object is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(234,18): error TS2532: Object is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(234,59): error TS2532: Object is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(242,17): error TS18048: 'touch1' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(242,34): error TS18048: 'touch2' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(243,17): error TS18048: 'touch1' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(243,34): error TS18048: 'touch2' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(250,45): error TS2345: Argument of type 'Touch | undefined' is not assignable to parameter of type 'Touch'.
+  Type 'undefined' is not assignable to type 'Touch'.
+client/src/components/mobile/MobileGestureHandler.tsx(253,18): error TS2532: Object is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(253,59): error TS2532: Object is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(254,18): error TS2532: Object is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(254,59): error TS2532: Object is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(262,17): error TS18048: 'touch1' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(262,34): error TS18048: 'touch2' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(263,17): error TS18048: 'touch1' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(263,34): error TS18048: 'touch2' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(298,14): error TS18048: 'touch' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(298,32): error TS18048: 'touch' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(320,45): error TS18048: 'touch' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(320,63): error TS18048: 'touch' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(327,43): error TS18048: 'touch' is possibly 'undefined'.
+client/src/components/mobile/MobileGestureHandler.tsx(327,61): error TS18048: 'touch' is possibly 'undefined'.
+client/src/components/mobile/MobileLoadingStates.tsx(368,24): error TS2532: Object is possibly 'undefined'.
+client/src/components/mobile/MobileLoadingStates.tsx(376,24): error TS2532: Object is possibly 'undefined'.
+client/src/components/mobile/MobileModal.tsx(2,35): error TS1484: 'PanInfo' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/mobile/mobileOptimizationManager.ts(1,10): error TS1484: 'DeviceInfo' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/mobile/mobileOptimizationManager.ts(1,22): error TS1484: 'PerformanceMetrics' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/mobile/mobileOptimizationManager.ts(1,42): error TS1484: 'OptimizationConfig' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/mobile/mobileOptimizationManager.ts(2,57): error TS1484: 'NetworkInfo' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/mobile/mobileOptimizationManager.ts(2,70): error TS1484: 'BatteryInfo' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/mobile/mobileUtils.ts(1,10): error TS1484: 'DeviceInfo' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/mobile/mobileUtils.ts(1,22): error TS1484: 'PerformanceMetrics' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/MobileOptimized.tsx(1,36): error TS1484: 'ReactNode' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/MobileOptimized.tsx(1,47): error TS1484: 'CSSProperties' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/PerformanceOptimizedPresetList.tsx(2,28): error TS2307: Cannot find module '@/components/ui/select' or its corresponding type declarations.
+client/src/components/ResponsiveContainer.tsx(1,10): error TS1484: 'ReactNode' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/ResponsiveContainer.tsx(1,21): error TS1484: 'CSSProperties' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/ResponsiveLayout.tsx(6,17): error TS1484: 'ReactNode' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/ResponsiveLayout.tsx(6,28): error TS1484: 'CSSProperties' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/ResponsiveLayout.tsx(92,22): error TS18048: 'entry' is possibly 'undefined'.
+client/src/components/ResponsiveLayout.tsx(93,13): error TS18048: 'entry' is possibly 'undefined'.
+client/src/components/RichTextEditor.tsx(13,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+client/src/components/RichTextEditor.tsx(14,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/TagInput.tsx(3,23): error TS2307: Cannot find module '@/components/ui/badge' or its corresponding type declarations.
+client/src/components/TagInput.tsx(4,23): error TS2307: Cannot find module '@/components/ui/input' or its corresponding type declarations.
+client/src/components/TagInput.tsx(5,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/TagInput.tsx(6,74): error TS2307: Cannot find module '@/components/ui/tooltip' or its corresponding type declarations.
+client/src/components/TagInput.tsx(7,50): error TS2307: Cannot find module '@/lib/tagService' or its corresponding type declarations.
+client/src/components/TagInput.tsx(9,26): error TS2307: Cannot find module '@/components/ui/skeleton' or its corresponding type declarations.
+client/src/components/TagInput.tsx(84,46): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+client/src/components/TagInput.tsx(191,16): error TS2345: Argument of type 'TagData | undefined' is not assignable to parameter of type 'string | TagData'.
+  Type 'undefined' is not assignable to type 'string | TagData'.
+client/src/components/TagInput.tsx(213,14): error TS2345: Argument of type 'TagData | undefined' is not assignable to parameter of type 'string | TagData'.
+  Type 'undefined' is not assignable to type 'string | TagData'.
+client/src/components/TagInput.tsx(283,14): error TS2345: Argument of type 'TagData | undefined' is not assignable to parameter of type 'string | TagData'.
+  Type 'undefined' is not assignable to type 'string | TagData'.
+client/src/components/TouchOptimized/index.tsx(507,23): error TS2532: Object is possibly 'undefined'.
+client/src/components/TouchOptimized/index.tsx(509,23): error TS2532: Object is possibly 'undefined'.
+client/src/components/ui/accordion.tsx(5,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/alert-dialog.tsx(4,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/alert-dialog.tsx(5,32): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+client/src/components/ui/alert.tsx(4,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/avatar.tsx(6,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/badge.tsx(4,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/breadcrumb.tsx(5,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/button.tsx(5,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/calendar.tsx(5,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/calendar.tsx(6,32): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+client/src/components/ui/card.tsx(3,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/carousel.tsx(7,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/carousel.tsx(8,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+client/src/components/ui/chart.tsx(6,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/checkbox.tsx(5,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/command.tsx(6,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/command.tsx(7,39): error TS2307: Cannot find module '@/components/ui/dialog' or its corresponding type declarations.
+client/src/components/ui/context-menu.tsx(5,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/dialog.tsx(7,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/drawer.tsx(6,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/dropdown-menu.tsx(5,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/EnhancedNavigationBar.tsx(3,35): error TS1484: 'Easing' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/ui/EnhancedNavigationBar.tsx(14,40): error TS2307: Cannot find module '@/utils/responsiveOptimizer' or its corresponding type declarations.
+client/src/components/ui/form.tsx(15,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/form.tsx(16,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+client/src/components/ui/hover-card.tsx(6,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/input-otp.tsx(5,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/input-otp.tsx(36,11): error TS2339: Property 'char' does not exist on type 'SlotProps | undefined'.
+client/src/components/ui/input-otp.tsx(36,17): error TS2339: Property 'hasFakeCaret' does not exist on type 'SlotProps | undefined'.
+client/src/components/ui/input-otp.tsx(36,31): error TS2339: Property 'isActive' does not exist on type 'SlotProps | undefined'.
+client/src/components/ui/input.tsx(3,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/label.tsx(5,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/menubar.tsx(7,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/navigation-menu.tsx(6,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/pagination.tsx(4,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/pagination.tsx(5,45): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+client/src/components/ui/pagination.tsx(68,5): error TS2783: 'size' is specified more than once, so this usage will be overwritten.
+client/src/components/ui/pagination.tsx(84,5): error TS2783: 'size' is specified more than once, so this usage will be overwritten.
+client/src/components/ui/popover.tsx(4,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/progress.tsx(6,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/radio-group.tsx(5,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/resizable.tsx(6,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/scroll-area.tsx(4,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/select.tsx(7,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/separator.tsx(4,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/sheet.tsx(8,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/sidebar.tsx(3,10): error TS1484: 'VariantProps' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/components/ui/sidebar.tsx(6,29): error TS2307: Cannot find module '@/hooks/use-mobile' or its corresponding type declarations.
+client/src/components/ui/sidebar.tsx(7,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/sidebar.tsx(8,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+client/src/components/ui/sidebar.tsx(9,23): error TS2307: Cannot find module '@/components/ui/input' or its corresponding type declarations.
+client/src/components/ui/sidebar.tsx(10,27): error TS2307: Cannot find module '@/components/ui/separator' or its corresponding type declarations.
+client/src/components/ui/sidebar.tsx(17,8): error TS2307: Cannot find module '@/components/ui/sheet' or its corresponding type declarations.
+client/src/components/ui/sidebar.tsx(18,26): error TS2307: Cannot find module '@/components/ui/skeleton' or its corresponding type declarations.
+client/src/components/ui/sidebar.tsx(24,8): error TS2307: Cannot find module '@/components/ui/tooltip' or its corresponding type declarations.
+client/src/components/ui/sidebar.tsx(283,17): error TS7006: Parameter 'event' implicitly has an 'any' type.
+client/src/components/ui/skeleton.tsx(1,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/slider.tsx(4,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/switch.tsx(4,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/table.tsx(3,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/tabs.tsx(4,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/textarea.tsx(3,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/toast.tsx(6,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/toaster.tsx(1,26): error TS2307: Cannot find module '@/hooks/use-toast' or its corresponding type declarations.
+client/src/components/ui/toaster.tsx(9,8): error TS2307: Cannot find module '@/components/ui/toast' or its corresponding type declarations.
+client/src/components/ui/toaster.tsx(16,31): error TS7031: Binding element 'id' implicitly has an 'any' type.
+client/src/components/ui/toaster.tsx(16,35): error TS7031: Binding element 'title' implicitly has an 'any' type.
+client/src/components/ui/toaster.tsx(16,42): error TS7031: Binding element 'description' implicitly has an 'any' type.
+client/src/components/ui/toaster.tsx(16,55): error TS7031: Binding element 'action' implicitly has an 'any' type.
+client/src/components/ui/toggle-group.tsx(7,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/toggle-group.tsx(8,32): error TS2307: Cannot find module '@/components/ui/toggle' or its corresponding type declarations.
+client/src/components/ui/toggle-group.tsx(22,4): error TS2322: Type '{ children: Element; ref: ForwardedRef<HTMLDivElement>; className: any; } | { children: Element; ref: ForwardedRef<HTMLDivElement>; className: any; }' is not assignable to type 'IntrinsicAttributes & ((ToggleGroupSingleProps | ToggleGroupMultipleProps) & RefAttributes<HTMLDivElement>)'.
+  Type '{ children: Element; ref: ForwardedRef<HTMLDivElement>; className: any; }' is not assignable to type 'IntrinsicAttributes & ((ToggleGroupSingleProps | ToggleGroupMultipleProps) & RefAttributes<HTMLDivElement>)'.
+    Property 'type' is missing in type '{ children: Element; ref: ForwardedRef<HTMLDivElement>; className: any; }' but required in type 'ToggleGroupMultipleProps'.
+client/src/components/ui/toggle-group.tsx(43,6): error TS2741: Property 'value' is missing in type '{ children: any; ref: ForwardedRef<HTMLButtonElement>; className: any; }' but required in type 'Omit<ToggleGroupItemImplProps, "pressed">'.
+client/src/components/ui/toggle.tsx(5,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/tooltip.tsx(6,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+client/src/components/ui/use-toast.tsx(6,8): error TS2307: Cannot find module '@/components/ui/toast' or its corresponding type declarations.
+client/src/components/ui/use-toast.tsx(161,22): error TS7006: Parameter 'open' implicitly has an 'any' type.
+client/src/components/VirtualizedCategoryList.tsx(2,28): error TS2307: Cannot find module '@/components/ui/select' or its corresponding type declarations.
+client/src/config/errorReporting.ts(8,10): error TS1484: 'ReportingConfig' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/config/errorReporting.ts(25,26): error TS2339: Property 'env' does not exist on type 'ImportMeta'.
+client/src/config/errorReporting.ts(26,26): error TS2339: Property 'env' does not exist on type 'ImportMeta'.
+client/src/config/errorReporting.ts(55,23): error TS2339: Property 'env' does not exist on type 'ImportMeta'.
+client/src/config/errorReporting.ts(65,21): error TS2339: Property 'env' does not exist on type 'ImportMeta'.
+client/src/contexts/HapticFeedbackContext.tsx(1,67): error TS1484: 'ReactNode' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/hooks/use-toast.ts(6,8): error TS2307: Cannot find module '@/components/ui/toast' or its corresponding type declarations.
+client/src/hooks/use-toast.ts(158,22): error TS7006: Parameter 'open' implicitly has an 'any' type.
+client/src/hooks/useAwayTimeNotifications.ts(3,35): error TS2307: Cannot find module '@shared/types' or its corresponding type declarations.
+client/src/hooks/useGamification.ts(93,39): error TS18048: 'reward' is possibly 'undefined'.
+client/src/hooks/useGamification.ts(95,11): error TS18048: 'reward' is possibly 'undefined'.
+client/src/hooks/useGamification.ts(97,36): error TS18048: 'reward' is possibly 'undefined'.
+client/src/hooks/useGamification.ts(97,64): error TS18048: 'reward' is possibly 'undefined'.
+client/src/hooks/useGamification.ts(97,88): error TS18048: 'reward' is possibly 'undefined'.
+client/src/hooks/useMobileHooks.ts(139,46): error TS2345: Argument of type 'Touch | undefined' is not assignable to parameter of type 'Touch'.
+  Type 'undefined' is not assignable to type 'Touch'.
+client/src/hooks/useMobileHooks.ts(145,16): error TS18048: 'touch' is possibly 'undefined'.
+client/src/hooks/useMobileHooks.ts(146,16): error TS18048: 'touch' is possibly 'undefined'.
+client/src/hooks/useMobileHooks.ts(158,18): error TS18048: 'touch2' is possibly 'undefined'.
+client/src/hooks/useMobileHooks.ts(158,35): error TS18048: 'touch1' is possibly 'undefined'.
+client/src/hooks/useMobileHooks.ts(159,18): error TS18048: 'touch2' is possibly 'undefined'.
+client/src/hooks/useMobileHooks.ts(159,35): error TS18048: 'touch1' is possibly 'undefined'.
+client/src/hooks/useMobileHooks.ts(168,47): error TS2345: Argument of type 'Touch | undefined' is not assignable to parameter of type 'Touch'.
+  Type 'undefined' is not assignable to type 'Touch'.
+client/src/hooks/useMobileHooks.ts(180,18): error TS18048: 'touch2' is possibly 'undefined'.
+client/src/hooks/useMobileHooks.ts(180,35): error TS18048: 'touch1' is possibly 'undefined'.
+client/src/hooks/useMobileHooks.ts(181,18): error TS18048: 'touch2' is possibly 'undefined'.
+client/src/hooks/useMobileHooks.ts(181,35): error TS18048: 'touch1' is possibly 'undefined'.
+client/src/hooks/useMobileHooks.ts(186,13): error TS18048: 'touch1' is possibly 'undefined'.
+client/src/hooks/useMobileHooks.ts(186,30): error TS18048: 'touch2' is possibly 'undefined'.
+client/src/hooks/useMobileHooks.ts(187,13): error TS18048: 'touch1' is possibly 'undefined'.
+client/src/hooks/useMobileHooks.ts(187,30): error TS18048: 'touch2' is possibly 'undefined'.
+client/src/hooks/useMobileHooks.ts(206,12): error TS18048: 'touch' is possibly 'undefined'.
+client/src/hooks/useMobileHooks.ts(207,12): error TS18048: 'touch' is possibly 'undefined'.
+client/src/hooks/useMobileLayout.ts(104,5): error TS2322: Type 'LayoutBreakpoint | undefined' is not assignable to type 'LayoutBreakpoint'.
+  Type 'undefined' is not assignable to type 'LayoutBreakpoint'.
+client/src/hooks/useMobileLayout.ts(118,7): error TS2322: Type '{ name?: "mobile-xs" | "mobile-sm" | "mobile-md" | "tablet" | "desktop" | undefined; minWidth?: number | undefined; maxWidth?: number; columns?: number | undefined; spacing?: string | undefined; fontSize?: string | undefined; padding?: string | undefined; borderRadius?: string | undefined; }' is not assignable to type 'LayoutBreakpoint'.
+  Types of property 'name' are incompatible.
+    Type '"mobile-xs" | "mobile-sm" | "mobile-md" | "tablet" | "desktop" | undefined' is not assignable to type '"mobile-xs" | "mobile-sm" | "mobile-md" | "tablet" | "desktop"'.
+      Type 'undefined' is not assignable to type '"mobile-xs" | "mobile-sm" | "mobile-md" | "tablet" | "desktop"'.
+client/src/hooks/useMobileLayout.ts(150,7): error TS2322: Type 'LayoutBreakpoint | undefined' is not assignable to type 'LayoutBreakpoint'.
+  Type 'undefined' is not assignable to type 'LayoutBreakpoint'.
+client/src/hooks/useMobilePerformance.ts(32,17): error TS4058: Return type of exported function has or is using name 'QualitySettings' from external module "D:/Kingeugine05-BrainwaveSync-main (4)/Kingeugine05-BrainwaveSync-main/client/src/hooks/usePerformanceOptimization" but cannot be named.
+client/src/lib/errorLoggingService.ts(325,5): error TS4114: This member must have an 'override' modifier because it overrides a member in the base class 'Component<P, { hasError: boolean; }, any>'.
+client/src/lib/errorLoggingService.ts(332,5): error TS4114: This member must have an 'override' modifier because it overrides a member in the base class 'Component<P, { hasError: boolean; }, any>'.
+client/src/lib/errorReportingService.ts(9,10): error TS1484: 'ErrorLog' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/lib/errorReportingService.ts(9,20): error TS1484: 'NetworkErrorLog' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/lib/queryClient.ts(1,23): error TS1484: 'QueryFunction' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/lib/tagService.ts(2,69): error TS2307: Cannot find module '@shared/types' or its corresponding type declarations.
+client/src/lib/templateService.ts(1,10): error TS2724: '"../../../shared/schema"' has no exported member named 'Template'. Did you mean 'templates'?
+client/src/lib/templateService.ts(1,20): error TS2305: Module '"../../../shared/schema"' has no exported member 'InsertTemplate'.
+client/src/lib/templateService.ts(202,29): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+client/src/lib/templateService.ts(203,22): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+client/src/pages/bioneural-beats.tsx(2,42): error TS2307: Cannot find module '@/hooks/useAwayTimeNotifications' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(3,35): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(4,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(5,24): error TS2307: Cannot find module '@/components/ui/slider' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(6,79): error TS2307: Cannot find module '@/components/ui/select' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(7,23): error TS2307: Cannot find module '@/components/ui/input' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(8,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(16,26): error TS2307: Cannot find module '@/components/ui/progress' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(17,48): error TS2307: Cannot find module '@/components/PerformanceOptimizedPresetList' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(18,41): error TS2307: Cannot find module '@/components/VirtualizedCategoryList' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(19,29): error TS2307: Cannot find module '@/hooks/useDebounce' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(20,60): error TS2307: Cannot find module '@/utils/localStorage' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(21,60): error TS2307: Cannot find module '@/hooks/useOptimizedPerformance' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(22,44): error TS2307: Cannot find module '@/hooks/useConsolidatedPerformance' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(23,56): error TS2307: Cannot find module '@/components/MobileOptimized' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(24,43): error TS2307: Cannot find module '@/components/mobile/mobileOptimizationManager' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(25,48): error TS2307: Cannot find module '@/utils/mobileOptimizations' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(26,37): error TS2307: Cannot find module '@/utils/browserCompatibility' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(27,29): error TS2307: Cannot find module '@/components/TouchOptimized' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(28,77): error TS2307: Cannot find module '@/utils/touchOptimization' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(29,26): error TS2307: Cannot find module '@/utils/audioStorage' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(30,25): error TS2307: Cannot find module '@/utils/offlineSync' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(39,8): error TS2307: Cannot find module '@/utils/browserCompatibility' or its corresponding type declarations.
+client/src/pages/bioneural-beats.tsx(1844,22): error TS2532: Object is possibly 'undefined'.
+client/src/pages/bioneural-beats.tsx(1864,89): error TS18048: 'freqIntensity' is possibly 'undefined'.
+client/src/pages/bioneural-beats.tsx(1874,41): error TS18048: 'freqIntensity' is possibly 'undefined'.
+client/src/pages/bioneural-beats.tsx(1876,91): error TS18048: 'freqIntensity' is possibly 'undefined'.
+client/src/pages/bioneural-beats.tsx(1888,84): error TS18048: 'freqIntensity' is possibly 'undefined'.
+client/src/pages/bioneural-beats.tsx(1889,49): error TS18048: 'freqIntensity' is possibly 'undefined'.
+client/src/pages/bioneural-beats.tsx(1909,32): error TS2532: Object is possibly 'undefined'.
+client/src/pages/bioneural-beats.tsx(1978,28): error TS2532: Object is possibly 'undefined'.
+client/src/pages/bioneural-beats.tsx(2041,22): error TS2532: Object is possibly 'undefined'.
+client/src/pages/bioneural-beats.tsx(2102,22): error TS2532: Object is possibly 'undefined'.
+client/src/pages/bioneural-beats.tsx(2118,39): error TS18048: 'armIntensity' is possibly 'undefined'.
+client/src/pages/bioneural-beats.tsx(2129,88): error TS18048: 'armIntensity' is possibly 'undefined'.
+client/src/pages/bioneural-beats.tsx(2130,43): error TS18048: 'armIntensity' is possibly 'undefined'.
+client/src/pages/bioneural-beats.tsx(2184,22): error TS2532: Object is possibly 'undefined'.
+client/src/pages/bioneural-beats.tsx(2255,35): error TS2532: Object is possibly 'undefined'.
+client/src/pages/bioneural-beats.tsx(2272,35): error TS2532: Object is possibly 'undefined'.
+client/src/pages/bioneural-beats.tsx(2585,30): error TS2345: Argument of type '(current: "Cosmic Mandala" | "Quantum Field" | "Neural Network" | "Crystal Cave" | "Galactic Spiral" | "DNA Helix" | "Blue Birds") => "Cosmic Mandala" | "Quantum Field" | ... 5 more ... | undefined' is not assignable to parameter of type 'SetStateAction<"Cosmic Mandala" | "Quantum Field" | "Neural Network" | "Crystal Cave" | "Galactic Spiral" | "DNA Helix" | "Blue Birds">'.
+  Type '(current: "Cosmic Mandala" | "Quantum Field" | "Neural Network" | "Crystal Cave" | "Galactic Spiral" | "DNA Helix" | "Blue Birds") => "Cosmic Mandala" | "Quantum Field" | ... 5 more ... | undefined' is not assignable to type '(prevState: "Cosmic Mandala" | "Quantum Field" | "Neural Network" | "Crystal Cave" | "Galactic Spiral" | "DNA Helix" | "Blue Birds") => "Cosmic Mandala" | "Quantum Field" | ... 4 more ... | "Blue Birds"'.
+    Type '"Cosmic Mandala" | "Quantum Field" | "Neural Network" | "Crystal Cave" | "Galactic Spiral" | "DNA Helix" | "Blue Birds" | undefined' is not assignable to type '"Cosmic Mandala" | "Quantum Field" | "Neural Network" | "Crystal Cave" | "Galactic Spiral" | "DNA Helix" | "Blue Birds"'.
+      Type 'undefined' is not assignable to type '"Cosmic Mandala" | "Quantum Field" | "Neural Network" | "Crystal Cave" | "Galactic Spiral" | "DNA Helix" | "Blue Birds"'.
+client/src/pages/bioneural-beats.tsx(3345,24): error TS2532: Object is possibly 'undefined'.
+client/src/pages/bioneural-beats.tsx(3346,45): error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+client/src/pages/bioneural-beats.tsx(3623,32): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/bioneural-beats.tsx(4004,53): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+client/src/pages/bioneural-beats.tsx(4262,32): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/bioneural-beats.tsx(4298,45): error TS7006: Parameter 'value' implicitly has an 'any' type.
+client/src/pages/bioneural-beats.tsx(4316,40): error TS2345: Argument of type '"Cosmic Mandala" | "Quantum Field" | "Neural Network" | "Crystal Cave" | "Galactic Spiral" | "DNA Helix" | "Blue Birds" | undefined' is not assignable to parameter of type 'SetStateAction<"Cosmic Mandala" | "Quantum Field" | "Neural Network" | "Crystal Cave" | "Galactic Spiral" | "DNA Helix" | "Blue Birds">'.
+  Type 'undefined' is not assignable to type 'SetStateAction<"Cosmic Mandala" | "Quantum Field" | "Neural Network" | "Crystal Cave" | "Galactic Spiral" | "DNA Helix" | "Blue Birds">'.
+client/src/pages/bioneural-beats.tsx(4335,55): error TS2345: Argument of type '"Cosmic Mandala" | "Quantum Field" | "Neural Network" | "Crystal Cave" | "Galactic Spiral" | "DNA Helix" | "Blue Birds" | undefined' is not assignable to parameter of type 'SetStateAction<"Cosmic Mandala" | "Quantum Field" | "Neural Network" | "Crystal Cave" | "Galactic Spiral" | "DNA Helix" | "Blue Birds">'.
+  Type 'undefined' is not assignable to type 'SetStateAction<"Cosmic Mandala" | "Quantum Field" | "Neural Network" | "Crystal Cave" | "Galactic Spiral" | "DNA Helix" | "Blue Birds">'.
+client/src/pages/bioneural-beats.tsx(4358,39): error TS7006: Parameter 'value' implicitly has an 'any' type.
+client/src/pages/bioneural-beats.tsx(4440,41): error TS7006: Parameter 'value' implicitly has an 'any' type.
+client/src/pages/bioneural-beats.tsx(4453,41): error TS7006: Parameter 'value' implicitly has an 'any' type.
+client/src/pages/bioneural-beats.tsx(4474,62): error TS7006: Parameter 'value' implicitly has an 'any' type.
+client/src/pages/bioneural-beats.tsx(4631,38): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/bioneural-beats.tsx(4664,37): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/bioneural-beats.tsx(4698,32): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/bioneural-beats.tsx(4987,28): error TS2345: Argument of type '"Cosmic Mandala" | "Quantum Field" | "Neural Network" | "Crystal Cave" | "Galactic Spiral" | "DNA Helix" | "Blue Birds" | undefined' is not assignable to parameter of type 'SetStateAction<"Cosmic Mandala" | "Quantum Field" | "Neural Network" | "Crystal Cave" | "Galactic Spiral" | "DNA Helix" | "Blue Birds">'.
+  Type 'undefined' is not assignable to type 'SetStateAction<"Cosmic Mandala" | "Quantum Field" | "Neural Network" | "Crystal Cave" | "Galactic Spiral" | "DNA Helix" | "Blue Birds">'.
+client/src/pages/not-found.tsx(1,35): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+client/src/pages/notes-simple.tsx(3,28): error TS2307: Cannot find module '@/lib/queryClient' or its corresponding type declarations.
+client/src/pages/notes-simple.tsx(4,58): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+client/src/pages/notes-simple.tsx(5,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+client/src/pages/notes-simple.tsx(6,23): error TS2307: Cannot find module '@/components/ui/input' or its corresponding type declarations.
+client/src/pages/notes-simple.tsx(7,26): error TS2307: Cannot find module '@/components/ui/textarea' or its corresponding type declarations.
+client/src/pages/notes-simple.tsx(8,23): error TS2307: Cannot find module '@/components/ui/badge' or its corresponding type declarations.
+client/src/pages/notes-simple.tsx(9,79): error TS2307: Cannot find module '@/components/ui/select' or its corresponding type declarations.
+client/src/pages/notes-simple.tsx(10,81): error TS2307: Cannot find module '@/components/ui/dialog' or its corresponding type declarations.
+client/src/pages/notes-simple.tsx(11,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+client/src/pages/notes-simple.tsx(12,26): error TS2307: Cannot find module '@/hooks/use-toast' or its corresponding type declarations.
+client/src/pages/notes-simple.tsx(27,39): error TS2307: Cannot find module '@shared/types' or its corresponding type declarations.
+client/src/pages/notes-simple.tsx(208,30): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/notes-simple.tsx(254,36): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/notes-simple.tsx(254,53): error TS7006: Parameter 'prev' implicitly has an 'any' type.
+client/src/pages/notes-simple.tsx(263,36): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/notes-simple.tsx(263,53): error TS7006: Parameter 'prev' implicitly has an 'any' type.
+client/src/pages/notes-simple.tsx(272,74): error TS7006: Parameter 'value' implicitly has an 'any' type.
+client/src/pages/notes-simple.tsx(272,95): error TS7006: Parameter 'prev' implicitly has an 'any' type.
+client/src/pages/notes-simple.tsx(287,80): error TS7006: Parameter 'value' implicitly has an 'any' type.
+client/src/pages/notes-simple.tsx(287,101): error TS7006: Parameter 'prev' implicitly has an 'any' type.
+client/src/pages/notes-simple.tsx(447,32): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/notes-simple.tsx(447,53): error TS7006: Parameter 'prev' implicitly has an 'any' type.
+client/src/pages/notes-simple.tsx(455,32): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/notes-simple.tsx(455,53): error TS7006: Parameter 'prev' implicitly has an 'any' type.
+client/src/pages/notes.tsx(3,28): error TS2307: Cannot find module '@/lib/queryClient' or its corresponding type declarations.
+client/src/pages/notes.tsx(4,87): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+client/src/pages/notes.tsx(5,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+client/src/pages/notes.tsx(6,23): error TS2307: Cannot find module '@/components/ui/input' or its corresponding type declarations.
+client/src/pages/notes.tsx(7,26): error TS2307: Cannot find module '@/components/ui/textarea' or its corresponding type declarations.
+client/src/pages/notes.tsx(8,23): error TS2307: Cannot find module '@/components/ui/badge' or its corresponding type declarations.
+client/src/pages/notes.tsx(9,79): error TS2307: Cannot find module '@/components/ui/select' or its corresponding type declarations.
+client/src/pages/notes.tsx(10,99): error TS2307: Cannot find module '@/components/ui/dialog' or its corresponding type declarations.
+client/src/pages/notes.tsx(11,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+client/src/pages/notes.tsx(12,26): error TS2307: Cannot find module '@/hooks/use-toast' or its corresponding type declarations.
+client/src/pages/notes.tsx(13,58): error TS2307: Cannot find module '@/components/ui/tabs' or its corresponding type declarations.
+client/src/pages/notes.tsx(14,28): error TS2307: Cannot find module '@/components/ui/scroll-area' or its corresponding type declarations.
+client/src/pages/notes.tsx(16,28): error TS2307: Cannot find module '@/components/RichTextEditor' or its corresponding type declarations.
+client/src/pages/notes.tsx(17,22): error TS2307: Cannot find module '@/components/TagInput' or its corresponding type declarations.
+client/src/pages/notes.tsx(39,65): error TS2307: Cannot find module '@shared/types' or its corresponding type declarations.
+client/src/pages/notes.tsx(40,34): error TS2307: Cannot find module '@shared/types' or its corresponding type declarations.
+client/src/pages/notes.tsx(41,66): error TS2307: Cannot find module '@/lib/templateService' or its corresponding type declarations.
+client/src/pages/notes.tsx(52,8): error TS2307: Cannot find module '@/lib/tagService' or its corresponding type declarations.
+client/src/pages/notes.tsx(741,28): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/notes.tsx(864,41): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+client/src/pages/notes.tsx(922,32): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/notes.tsx(930,32): error TS7006: Parameter 'value' implicitly has an 'any' type.
+client/src/pages/notes.tsx(939,39): error TS7006: Parameter 'value' implicitly has an 'any' type.
+client/src/pages/notes.tsx(960,39): error TS7006: Parameter 'value' implicitly has an 'any' type.
+client/src/pages/notes.tsx(982,32): error TS7006: Parameter 'tags' implicitly has an 'any' type.
+client/src/pages/notes.tsx(1011,57): error TS7006: Parameter 'open' implicitly has an 'any' type.
+client/src/pages/notes.tsx(1029,34): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/notes.tsx(1037,34): error TS7006: Parameter 'value' implicitly has an 'any' type.
+client/src/pages/notes.tsx(1046,41): error TS7006: Parameter 'value' implicitly has an 'any' type.
+client/src/pages/notes.tsx(1067,41): error TS7006: Parameter 'value' implicitly has an 'any' type.
+client/src/pages/notes.tsx(1089,34): error TS7006: Parameter 'tags' implicitly has an 'any' type.
+client/src/pages/notes.tsx(1240,57): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+client/src/pages/notes.tsx(1324,32): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/notes.tsx(1333,39): error TS7006: Parameter 'value' implicitly has an 'any' type.
+client/src/pages/notes.tsx(1356,32): error TS7006: Parameter 'tags' implicitly has an 'any' type.
+client/src/pages/notes.tsx(1368,32): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/notes.tsx(1669,32): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/notes.tsx(1684,34): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/notes.tsx(1728,32): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/notes.tsx(1736,37): error TS7006: Parameter 'value' implicitly has an 'any' type.
+client/src/pages/settings.tsx(3,75): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+client/src/pages/settings.tsx(4,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+client/src/pages/settings.tsx(5,24): error TS2307: Cannot find module '@/components/ui/switch' or its corresponding type declarations.
+client/src/pages/settings.tsx(6,79): error TS2307: Cannot find module '@/components/ui/select' or its corresponding type declarations.
+client/src/pages/settings.tsx(7,23): error TS2307: Cannot find module '@/components/ui/input' or its corresponding type declarations.
+client/src/pages/settings.tsx(8,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+client/src/pages/settings.tsx(9,26): error TS2307: Cannot find module '@/components/ui/textarea' or its corresponding type declarations.
+client/src/pages/settings.tsx(10,26): error TS2307: Cannot find module '@/hooks/use-toast' or its corresponding type declarations.
+client/src/pages/settings.tsx(12,28): error TS2307: Cannot find module '@/lib/queryClient' or its corresponding type declarations.
+client/src/pages/settings.tsx(13,35): error TS2307: Cannot find module '@shared/types' or its corresponding type declarations.
+client/src/pages/settings.tsx(14,42): error TS2307: Cannot find module '@/hooks/useAwayTimeNotifications' or its corresponding type declarations.
+client/src/pages/settings.tsx(48,23): error TS7006: Parameter 'prev' implicitly has an 'any' type.
+client/src/pages/settings.tsx(216,37): error TS7006: Parameter 'checked' implicitly has an 'any' type.
+client/src/pages/settings.tsx(239,39): error TS7006: Parameter 'value' implicitly has an 'any' type.
+client/src/pages/settings.tsx(274,34): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/settings.tsx(296,34): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/tag-management.tsx(3,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+client/src/pages/tag-management.tsx(4,23): error TS2307: Cannot find module '@/components/ui/input' or its corresponding type declarations.
+client/src/pages/tag-management.tsx(5,87): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+client/src/pages/tag-management.tsx(6,58): error TS2307: Cannot find module '@/components/ui/tabs' or its corresponding type declarations.
+client/src/pages/tag-management.tsx(7,114): error TS2307: Cannot find module '@/components/ui/dialog' or its corresponding type declarations.
+client/src/pages/tag-management.tsx(8,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+client/src/pages/tag-management.tsx(9,23): error TS2307: Cannot find module '@/components/ui/badge' or its corresponding type declarations.
+client/src/pages/tag-management.tsx(11,28): error TS2307: Cannot find module '@/components/ui/scroll-area' or its corresponding type declarations.
+client/src/pages/tag-management.tsx(12,26): error TS2307: Cannot find module '@/components/ui/use-toast' or its corresponding type declarations.
+client/src/pages/tag-management.tsx(14,34): error TS2307: Cannot find module '@shared/types' or its corresponding type declarations.
+client/src/pages/tag-management.tsx(25,8): error TS2307: Cannot find module '@/lib/tagService' or its corresponding type declarations.
+client/src/pages/tag-management.tsx(206,40): error TS18046: 'categories' is of type 'unknown'.
+client/src/pages/tag-management.tsx(264,37): error TS2345: Argument of type 'string' is not assignable to parameter of type 'void'.
+client/src/pages/tag-management.tsx(281,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'void'.
+client/src/pages/tag-management.tsx(325,36): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/tag-management.tsx(335,36): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/tag-management.tsx(363,15): error TS18046: 'categories' is of type 'unknown'.
+client/src/pages/tag-management.tsx(371,16): error TS18046: 'categories' is of type 'unknown'.
+client/src/pages/tag-management.tsx(371,32): error TS7006: Parameter 'category' implicitly has an 'any' type.
+client/src/pages/tag-management.tsx(382,33): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+client/src/pages/tag-management.tsx(384,30): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+client/src/pages/tag-management.tsx(402,36): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+client/src/pages/tag-management.tsx(404,41): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+client/src/pages/tag-management.tsx(407,36): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+client/src/pages/tag-management.tsx(450,20): error TS18046: 'categories' is of type 'unknown'.
+client/src/pages/tag-management.tsx(450,36): error TS7006: Parameter 'category' implicitly has an 'any' type.
+client/src/pages/tag-management.tsx(463,29): error TS18046: 'categories' is of type 'unknown'.
+client/src/pages/tag-management.tsx(484,36): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/tag-management.tsx(496,44): error TS18046: 'categories' is of type 'unknown'.
+client/src/pages/tag-management.tsx(496,60): error TS7006: Parameter 'c' implicitly has an 'any' type.
+client/src/pages/tag-management.tsx(510,26): error TS18046: 'categories' is of type 'unknown'.
+client/src/pages/tag-management.tsx(510,42): error TS7006: Parameter 'category' implicitly has an 'any' type.
+client/src/pages/tag-management.tsx(522,38): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/tag-management.tsx(528,40): error TS7006: Parameter 'e' implicitly has an 'any' type.
+client/src/pages/tag-management.tsx(572,20): error TS18046: 'categories' is of type 'unknown'.
+client/src/pages/tag-management.tsx(586,34): error TS7006: Parameter 'tag' implicitly has an 'any' type.
+client/src/pages/tag-management.tsx(587,42): error TS18046: 'categories' is of type 'unknown'.
+client/src/pages/tag-management.tsx(587,58): error TS7006: Parameter 'c' implicitly has an 'any' type.
+client/src/utils/browserCompatibility.ts(410,7): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+client/src/utils/browserCompatibility.ts(415,7): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+client/src/utils/browserCompatibility.ts(420,7): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+client/src/utils/browserCompatibility.ts(425,7): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+client/src/utils/mobileOptimizationManager.ts(1,10): error TS1484: 'DeviceInfo' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/utils/mobileOptimizationManager.ts(1,22): error TS1484: 'PerformanceMetrics' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+client/src/utils/mobileUtils.ts(308,25): error TS2532: Object is possibly 'undefined'.
+client/src/utils/mobileUtils.ts(308,47): error TS2532: Object is possibly 'undefined'.
+client/src/utils/mobileUtils.ts(311,15): error TS2532: Object is possibly 'undefined'.
+client/src/utils/mobileUtils.ts(311,29): error TS2532: Object is possibly 'undefined'.
+client/src/utils/mobileUtils.ts(312,15): error TS2532: Object is possibly 'undefined'.
+client/src/utils/mobileUtils.ts(312,29): error TS2532: Object is possibly 'undefined'.
+client/src/utils/offlineSync.ts(241,37): error TS2532: Object is possibly 'undefined'.
+client/src/utils/offlineSync.ts(309,37): error TS2532: Object is possibly 'undefined'.
+client/src/utils/responsiveOptimizer.ts(263,5): error TS2322: Type 'BreakpointConfig | undefined' is not assignable to type 'BreakpointConfig'.
+  Type 'undefined' is not assignable to type 'BreakpointConfig'.
+client/src/utils/touchOptimization.ts(226,34): error TS2532: Object is possibly 'undefined'.
+client/src/utils/touchOptimization.ts(226,57): error TS2532: Object is possibly 'undefined'.
+client/src/utils/touchOptimization.ts(230,32): error TS2345: Argument of type 'Touch | undefined' is not assignable to parameter of type 'Touch'.
+  Type 'undefined' is not assignable to type 'Touch'.
+client/src/utils/touchOptimization.ts(237,47): error TS2345: Argument of type 'TouchPoint | undefined' is not assignable to parameter of type 'TouchPoint'.
+  Type 'undefined' is not assignable to type 'TouchPoint'.
+client/src/utils/touchOptimization.ts(238,41): error TS2345: Argument of type 'TouchPoint | undefined' is not assignable to parameter of type 'TouchPoint'.
+  Type 'undefined' is not assignable to type 'TouchPoint'.
+client/src/utils/touchOptimization.ts(294,61): error TS18048: 'touch' is possibly 'undefined'.
+client/src/utils/touchOptimization.ts(297,41): error TS18048: 'touch' is possibly 'undefined'.
+client/src/utils/touchOptimization.ts(298,41): error TS18048: 'touch' is possibly 'undefined'.
+client/src/utils/touchOptimization.ts(307,44): error TS18048: 'touch' is possibly 'undefined'.
+client/src/utils/touchOptimization.ts(308,44): error TS18048: 'touch' is possibly 'undefined'.
+client/src/utils/touchOptimization.ts(319,48): error TS2345: Argument of type 'TouchPoint | undefined' is not assignable to parameter of type 'TouchPoint'.
+  Type 'undefined' is not assignable to type 'TouchPoint'.
+client/src/utils/touchOptimization.ts(320,42): error TS2345: Argument of type 'TouchPoint | undefined' is not assignable to parameter of type 'TouchPoint'.
+  Type 'undefined' is not assignable to type 'TouchPoint'.
+client/src/utils/touchOptimization.ts(325,39): error TS2345: Argument of type 'TouchPoint | undefined' is not assignable to parameter of type 'TouchPoint'.
+  Type 'undefined' is not assignable to type 'TouchPoint'.
+client/src/utils/touchOptimization.ts(342,39): error TS2345: Argument of type 'TouchPoint | undefined' is not assignable to parameter of type 'TouchPoint'.
+  Type 'undefined' is not assignable to type 'TouchPoint'.
+client/src/utils/touchOptimization.ts(509,20): error TS2532: Object is possibly 'undefined'.
+client/src/utils/touchOptimization.ts(509,34): error TS2532: Object is possibly 'undefined'.
+client/src/utils/touchOptimization.ts(510,20): error TS2532: Object is possibly 'undefined'.
+client/src/utils/touchOptimization.ts(510,34): error TS2532: Object is possibly 'undefined'.
+client/src/utils/touchOptimization.ts(511,23): error TS2532: Object is possibly 'undefined'.
+client/src/utils/touchOptimization.ts(511,40): error TS2532: Object is possibly 'undefined'.

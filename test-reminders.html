@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminders Functionality Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1e293b;
+            color: white;
+        }
+        .test-section {
+            background: #334155;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .success { background: #065f46; border: 1px solid #10b981; }
+        .error { background: #7f1d1d; border: 1px solid #ef4444; }
+        .warning { background: #78350f; border: 1px solid #f59e0b; }
+        .info { background: #1e3a8a; border: 1px solid #3b82f6; }
+        button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover { background: #2563eb; }
+        button:disabled { background: #64748b; cursor: not-allowed; }
+        .log {
+            background: #0f172a;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+            margin: 10px 0;
+        }
+        .timer {
+            font-size: 18px;
+            font-weight: bold;
+            color: #f59e0b;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔔 BrainwaveSync Reminders Functionality Test</h1>
+    <p>This comprehensive test verifies that the reminders feature works correctly when enabled.</p>
+
+    <div class="test-section">
+        <h2>1. Browser Notification Support</h2>
+        <div id="notification-support"></div>
+        <button onclick="checkNotificationSupport()">Check Support</button>
+    </div>
+
+    <div class="test-section">
+        <h2>2. Notification Permission</h2>
+        <div id="permission-status"></div>
+        <button onclick="requestPermission()">Request Permission</button>
+    </div>
+
+    <div class="test-section">
+        <h2>3. Settings API Test</h2>
+        <div id="settings-status"></div>
+        <button onclick="testSettingsAPI()">Test Settings API</button>
+        <button onclick="enableReminders()">Enable Reminders (5min)</button>
+    </div>
+
+    <div class="test-section">
+        <h2>4. Page Visibility API Test</h2>
+        <div id="visibility-status"></div>
+        <button onclick="testVisibilityAPI()">Test Visibility Detection</button>
+        <p><small>Switch to another tab/window and come back to test</small></p>
+    </div>
+
+    <div class="test-section">
+        <h2>5. Reminder Timer Test</h2>
+        <div id="timer-status"></div>
+        <div id="countdown" class="timer"></div>
+        <button onclick="startReminderTest()">Start 30-Second Test</button>
+        <button onclick="stopReminderTest()">Stop Test</button>
+        <button onclick="testNotificationNow()">Test Notification Now</button>
+    </div>
+
+    <div class="test-section">
+        <h2>6. User Interaction Detection</h2>
+        <div id="interaction-status"></div>
+        <button onclick="testInteractionDetection()">Test Interaction Detection</button>
+        <p><small>Move mouse, click, or scroll after starting test</small></p>
+    </div>
+
+    <div class="test-section">
+        <h2>Test Log</h2>
+        <div id="log" class="log"></div>
+        <button onclick="clearLog()">Clear Log</button>
+    </div>
+
+    <script>
+        let testTimer = null;
+        let countdownTimer = null;
+        let interactionTestActive = false;
+        let lastInteractionTime = Date.now();
+
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const logElement = document.getElementById('log');
+            const logEntry = `[${timestamp}] ${message}\n`;
+            logElement.textContent += logEntry;
+            logElement.scrollTop = logElement.scrollHeight;
+            console.log(`[REMINDER-TEST] ${message}`);
+        }
+
+        function updateStatus(elementId, message, type = 'info') {
+            const element = document.getElementById(elementId);
+            element.innerHTML = `<div class="status ${type}">${message}</div>`;
+        }
+
+        function checkNotificationSupport() {
+            if ('Notification' in window) {
+                updateStatus('notification-support', '✅ Browser supports notifications', 'success');
+                log('Browser supports notifications');
+            } else {
+                updateStatus('notification-support', '❌ Browser does not support notifications', 'error');
+                log('Browser does not support notifications');
+            }
+        }
+
+        function requestPermission() {
+            if ('Notification' in window) {
+                Notification.requestPermission().then(permission => {
+                    if (permission === 'granted') {
+                        updateStatus('permission-status', '✅ Notification permission granted', 'success');
+                        log('Notification permission granted');
+                    } else if (permission === 'denied') {
+                        updateStatus('permission-status', '❌ Notification permission denied', 'error');
+                        log('Notification permission denied');
+                    } else {
+                        updateStatus('permission-status', '⚠️ Notification permission default/dismissed', 'warning');
+                        log('Notification permission default/dismissed');
+                    }
+                });
+            } else {
+                updateStatus('permission-status', '❌ Notifications not supported', 'error');
+                log('Notifications not supported');
+            }
+        }
+
+        async function testSettingsAPI() {
+            try {
+                // Test GET /api/settings
+                const response = await fetch('http://localhost:5000/api/settings');
+                if (response.ok) {
+                    const settings = await response.json();
+                    updateStatus('settings-status', `✅ Settings API working. Reminders: ${settings.reminderEnabled ? 'Enabled' : 'Disabled'}`, 'success');
+                    log(`Settings API test successful. Current settings: ${JSON.stringify(settings)}`);
+                } else {
+                    updateStatus('settings-status', `❌ Settings API error: ${response.status}`, 'error');
+                    log(`Settings API error: ${response.status} ${response.statusText}`);
+                }
+            } catch (error) {
+                updateStatus('settings-status', `❌ Settings API error: ${error.message}`, 'error');
+                log(`Settings API error: ${error.message}`);
+            }
+        }
+
+        async function enableReminders() {
+            try {
+                const response = await fetch('http://localhost:5000/api/settings', {
+                    method: 'PATCH',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        reminderEnabled: true,
+                        reminderInterval: '5',
+                        notificationTitle: 'Test Reminder',
+                        notificationMessage: 'This is a test reminder from BrainwaveSync'
+                    })
+                });
+                
+                if (response.ok) {
+                    updateStatus('settings-status', '✅ Reminders enabled (5 minutes)', 'success');
+                    log('Reminders enabled with 5-minute interval');
+                } else {
+                    updateStatus('settings-status', `❌ Failed to enable reminders: ${response.status}`, 'error');
+                    log(`Failed to enable reminders: ${response.status}`);
+                }
+            } catch (error) {
+                updateStatus('settings-status', `❌ Error enabling reminders: ${error.message}`, 'error');
+                log(`Error enabling reminders: ${error.message}`);
+            }
+        }
+
+        function testVisibilityAPI() {
+            if ('visibilitychange' in document) {
+                updateStatus('visibility-status', '✅ Page Visibility API supported. Switch tabs to test.', 'info');
+                log('Page Visibility API test started');
+                
+                const handleVisibilityChange = () => {
+                    if (document.hidden) {
+                        updateStatus('visibility-status', '🔄 Page is hidden (user switched away)', 'warning');
+                        log('Page visibility: HIDDEN (user left)');
+                    } else {
+                        updateStatus('visibility-status', '✅ Page is visible (user returned)', 'success');
+                        log('Page visibility: VISIBLE (user returned)');
+                    }
+                };
+                
+                document.addEventListener('visibilitychange', handleVisibilityChange);
+                
+                // Remove listener after 30 seconds
+                setTimeout(() => {
+                    document.removeEventListener('visibilitychange', handleVisibilityChange);
+                    log('Page Visibility API test completed');
+                }, 30000);
+            } else {
+                updateStatus('visibility-status', '❌ Page Visibility API not supported', 'error');
+                log('Page Visibility API not supported');
+            }
+        }
+
+        function startReminderTest() {
+            if (testTimer) {
+                clearTimeout(testTimer);
+                clearInterval(countdownTimer);
+            }
+            
+            updateStatus('timer-status', '🔄 Starting 30-second reminder test...', 'info');
+            log('Starting 30-second reminder test');
+            
+            let timeLeft = 30;
+            document.getElementById('countdown').textContent = `${timeLeft}s remaining`;
+            
+            countdownTimer = setInterval(() => {
+                timeLeft--;
+                document.getElementById('countdown').textContent = `${timeLeft}s remaining`;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(countdownTimer);
+                    document.getElementById('countdown').textContent = 'Test completed!';
+                }
+            }, 1000);
+            
+            testTimer = setTimeout(() => {
+                showTestNotification();
+                updateStatus('timer-status', '✅ 30-second test completed - notification should have appeared', 'success');
+                log('30-second reminder test completed');
+            }, 30000);
+        }
+
+        function stopReminderTest() {
+            if (testTimer) {
+                clearTimeout(testTimer);
+                testTimer = null;
+            }
+            if (countdownTimer) {
+                clearInterval(countdownTimer);
+                countdownTimer = null;
+            }
+            
+            updateStatus('timer-status', '⏹️ Reminder test stopped', 'warning');
+            document.getElementById('countdown').textContent = 'Test stopped';
+            log('Reminder test stopped manually');
+        }
+
+        function testNotificationNow() {
+            showTestNotification();
+            log('Manual test notification triggered');
+        }
+
+        function showTestNotification() {
+            if ('Notification' in window && Notification.permission === 'granted') {
+                const notification = new Notification('Test Reminder', {
+                    body: 'This is a test reminder from BrainwaveSync',
+                    icon: '/favicon.ico',
+                    tag: 'test-reminder',
+                    badge: '/favicon.ico',
+                    requireInteraction: false,
+                    silent: false
+                });
+                
+                log('Test notification created and displayed');
+                
+                // Auto-close after 8 seconds
+                setTimeout(() => {
+                    notification.close();
+                    log('Test notification auto-closed after 8 seconds');
+                }, 8000);
+                
+                notification.onclick = () => {
+                    log('Test notification clicked - focusing window');
+                    window.focus();
+                    notification.close();
+                };
+                
+                notification.onerror = (error) => {
+                    log(`Notification error: ${error}`);
+                };
+                
+                notification.onshow = () => {
+                    log('Notification successfully shown');
+                };
+                
+                notification.onclose = () => {
+                    log('Notification closed');
+                };
+            } else {
+                log('Cannot show notification - permission not granted or not supported');
+            }
+        }
+
+        function testInteractionDetection() {
+            interactionTestActive = true;
+            lastInteractionTime = Date.now();
+            
+            updateStatus('interaction-status', '🔄 Interaction detection test active. Move mouse or interact with page.', 'info');
+            log('Interaction detection test started');
+            
+            const events = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'];
+            
+            const handleInteraction = (event) => {
+                if (interactionTestActive) {
+                    const timeSinceLastInteraction = Date.now() - lastInteractionTime;
+                    lastInteractionTime = Date.now();
+                    
+                    updateStatus('interaction-status', `✅ Interaction detected: ${event.type} (${timeSinceLastInteraction}ms since last)`, 'success');
+                    log(`Interaction detected: ${event.type}`);
+                }
+            };
+            
+            events.forEach(event => {
+                document.addEventListener(event, handleInteraction);
+            });
+            
+            // Stop test after 30 seconds
+            setTimeout(() => {
+                interactionTestActive = false;
+                events.forEach(event => {
+                    document.removeEventListener(event, handleInteraction);
+                });
+                updateStatus('interaction-status', '⏹️ Interaction detection test completed', 'warning');
+                log('Interaction detection test completed');
+            }, 30000);
+        }
+
+        function clearLog() {
+            document.getElementById('log').textContent = '';
+        }
+
+        // Initialize tests
+        window.onload = () => {
+            log('Reminder functionality test page loaded');
+            checkNotificationSupport();
+            
+            // Show current permission status
+            if ('Notification' in window) {
+                const permission = Notification.permission;
+                updateStatus('permission-status', `Current permission: ${permission}`, 
+                    permission === 'granted' ? 'success' : permission === 'denied' ? 'error' : 'warning');
+            }
+        };
+    </script>
+</body>
+</html>

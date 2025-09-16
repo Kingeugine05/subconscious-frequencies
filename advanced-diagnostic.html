@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainwaveSync Advanced Diagnostic</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f8fafc;
+      color: #334155;
+    }
+    h1 {
+      color: #0f172a;
+      border-bottom: 2px solid #10b981;
+      padding-bottom: 10px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .status {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .status-indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .success {
+      background-color: #10b981;
+    }
+    .error {
+      background-color: #ef4444;
+    }
+    .pending {
+      background-color: #f59e0b;
+    }
+    pre {
+      background-color: #f1f5f9;
+      padding: 10px;
+      border-radius: 4px;
+      overflow: auto;
+      font-size: 14px;
+    }
+    button {
+      background-color: #10b981;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+    button:hover {
+      background-color: #0d9488;
+    }
+    .resource-list {
+      list-style: none;
+      padding: 0;
+    }
+    .resource-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .resource-list li:last-child {
+      border-bottom: none;
+    }
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid #e2e8f0;
+      margin-bottom: 15px;
+    }
+    .tab {
+      padding: 8px 16px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+    }
+    .tab.active {
+      border-bottom: 2px solid #10b981;
+      font-weight: 500;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .network-test {
+      margin-top: 10px;
+    }
+    .test-result {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+    .module-test-btn {
+      background-color: #6366f1;
+    }
+    .module-test-btn:hover {
+      background-color: #4f46e5;
+    }
+    .fix-btn {
+      background-color: #f97316;
+    }
+    .fix-btn:hover {
+      background-color: #ea580c;
+    }
+    .error-log-entry {
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+  <h1>BrainwaveSync Advanced Diagnostic</h1>
+  
+  <div class="card">
+    <h2>System Status</h2>
+    <div id="system-status" class="status">
+      <div class="status-indicator pending"></div>
+      <span>Checking system status...</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="tabs">
+      <div class="tab active" data-tab="resources">Resources</div>
+      <div class="tab" data-tab="network">Network</div>
+      <div class="tab" data-tab="modules">Modules</div>
+      <div class="tab" data-tab="errors">Errors</div>
+      <div class="tab" data-tab="fixes">Fixes</div>
+    </div>
+
+    <div id="resources" class="tab-content active">
+      <h3>Critical Resources</h3>
+      <ul id="resource-list" class="resource-list">
+        <li>Checking resources...</li>
+      </ul>
+    </div>
+
+    <div id="network" class="tab-content">
+      <h3>Network Diagnostics</h3>
+      <div class="network-test">
+        <button id="test-api">Test API Endpoints</button>
+        <button id="test-cors">Test CORS</button>
+        <div id="network-results" class="test-result">Click a test to run it</div>
+      </div>
+    </div>
+
+    <div id="modules" class="tab-content">
+      <h3>Module Loading Tests</h3>
+      <p>Test if dynamic module loading is working correctly:</p>
+      <button id="test-dynamic-import" class="module-test-btn">Test Dynamic Import</button>
+      <button id="test-chunk-loading" class="module-test-btn">Test Chunk Loading</button>
+      <pre id="module-test-results">No tests run yet</pre>
+    </div>
+
+    <div id="errors" class="tab-content">
+      <h3>JavaScript Errors</h3>
+      <button id="check-local-storage">Check Error Logs in LocalStorage</button>
+      <button id="clear-error-logs">Clear Error Logs</button>
+      <pre id="js-errors">No errors detected yet...</pre>
+    </div>
+
+    <div id="fixes" class="tab-content">
+      <h3>Potential Fixes</h3>
+      <div id="fixes-container">
+        <button id="fix-service-worker" class="fix-btn">Unregister Service Worker</button>
+        <button id="fix-clear-cache" class="fix-btn">Clear All Caches</button>
+        <button id="fix-reset-storage" class="fix-btn">Reset LocalStorage</button>
+        <button id="fix-reload-clean" class="fix-btn">Hard Reload (Clear Cache)</button>
+      </div>
+      <pre id="fix-results">No fixes applied yet</pre>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Browser Information</h2>
+    <pre id="browser-info">Loading browser information...</pre>
+  </div>
+
+  <div class="card">
+    <h2>Actions</h2>
+    <button id="reload-app">Reload Main App</button>
+    <button id="check-resources">Check Resources Again</button>
+    <button id="download-report">Download Diagnostic Report</button>
+  </div>
+
+  <script>
+    // Store original console methods
+    const originalConsoleError = console.error;
+    const originalConsoleWarn = console.warn;
+    const jsErrorsLog = document.getElementById('js-errors');
+    const errors = [];
+    const diagnosticData = {
+      timestamp: new Date().toISOString(),
+      browserInfo: {},
+      resourceTests: [],
+      errors: [],
+      fixes: []
+    };
+
+    // Override console.error
+    console.error = function(...args) {
+      // Call original function
+      originalConsoleError.apply(console, args);
+      
+      // Log to our UI
+      const errorText = args.map(arg => 
+        typeof arg === 'object' ? JSON.stringify(arg) : String(arg)
+      ).join(' ');
+      
+      errors.push(errorText);
+      diagnosticData.errors.push({
+        type: 'error',
+        timestamp: new Date().toISOString(),
+        message: errorText
+      });
+      jsErrorsLog.textContent = errors.join('\n\n');
+    };
+
+    // Override console.warn
+    console.warn = function(...args) {
+      // Call original function
+      originalConsoleWarn.apply(console, args);
+      
+      // Log to our UI
+      const warnText = args.map(arg => 
+        typeof arg === 'object' ? JSON.stringify(arg) : String(arg)
+      ).join(' ');
+      
+      diagnosticData.errors.push({
+        type: 'warning',
+        timestamp: new Date().toISOString(),
+        message: warnText
+      });
+    };
+
+    // Function to check if a URL is accessible
+    async function checkUrl(url, method = 'HEAD') {
+      try {
+        const startTime = performance.now();
+        const response = await fetch(url, { method, cache: 'no-store' });
+        const endTime = performance.now();
+        const duration = endTime - startTime;
+        
+        return {
+          url,
+          status: response.status,
+          ok: response.ok,
+          duration: Math.round(duration),
+          headers: Object.fromEntries([...response.headers.entries()])
+        };
+      } catch (error) {
+        return {
+          url,
+          error: error.message,
+          ok: false
+        };
+      }
+    }
+
+    // Check critical resources
+    async function checkResources() {
+      const resourceList = document.getElementById('resource-list');
+      resourceList.innerHTML = '<li>Checking resources...</li>';
+
+      const resources = [
+        { name: 'Main Page', url: '/' },
+        { name: 'JavaScript Bundle', url: '/assets/index-N6IeE8KG.js' },
+        { name: 'CSS Bundle', url: '/assets/index-DdjovNlI.css' },
+        { name: 'Manifest', url: '/manifest.json' },
+        { name: 'Service Worker', url: '/sw.js' },
+        { name: 'OG Image', url: '/og-image.svg' },
+        { name: 'Icon (192px)', url: '/icon-192.svg' },
+        { name: 'API Health Check', url: '/api/health' }
+      ];
+
+      const results = await Promise.all(resources.map(async (resource) => {
+        const result = await checkUrl(resource.url);
+        return { ...resource, ...result };
+      }));
+
+      diagnosticData.resourceTests = results;
+
+      resourceList.innerHTML = '';
+      let allOk = true;
+
+      results.forEach(result => {
+        const li = document.createElement('li');
+        
+        if (result.ok) {
+          li.innerHTML = `<div class="status"><div class="status-indicator success"></div><span>${result.name}: OK (${result.status}) - ${result.duration}ms</span></div>`;
+        } else {
+          allOk = false;
+          li.innerHTML = `<div class="status"><div class="status-indicator error"></div><span>${result.name}: ${result.error || `Error (${result.status})`}</span></div>`;
+        }
+        
+        resourceList.appendChild(li);
+      });
+
+      // Update system status
+      const systemStatus = document.getElementById('system-status');
+      if (allOk) {
+        systemStatus.innerHTML = '<div class="status-indicator success"></div><span>All systems operational</span>';
+      } else {
+        systemStatus.innerHTML = '<div class="status-indicator error"></div><span>Some resources are unavailable</span>';
+      }
+
+      return results;
+    }
+
+    // Test dynamic import functionality
+    async function testDynamicImport() {
+      const resultElement = document.getElementById('module-test-results');
+      resultElement.textContent = 'Testing dynamic import...';
+      
+      try {
+        // Create a simple module to import
+        const blob = new Blob([
+          'export function test() { return "Dynamic import successful!"; }'
+        ], { type: 'application/javascript' });
+        
+        const url = URL.createObjectURL(blob);
+        
+        // Try to dynamically import it
+        const module = await import(/* @vite-ignore */ url);
+        const result = module.test();
+        
+        resultElement.textContent = `Test result: ${result}`;
+        return true;
+      } catch (error) {
+        resultElement.textContent = `Dynamic import failed: ${error.message}`;
+        console.error('Dynamic import test failed:', error);
+        return false;
+      }
+    }
+
+    // Test chunk loading simulation
+    function testChunkLoading() {
+      const resultElement = document.getElementById('module-test-results');
+      resultElement.textContent = 'Testing chunk loading simulation...';
+      
+      // Create a script element to simulate chunk loading
+      const script = document.createElement('script');
+      script.type = 'module';
+      
+      // Generate a unique ID for this test
+      const testId = `chunk-test-${Date.now()}`;
+      
+      // Create a global callback function
+      window[testId] = function(success) {
+        if (success) {
+          resultElement.textContent = 'Chunk loading simulation successful!';
+        } else {
+          resultElement.textContent = 'Chunk loading simulation failed';
+        }
+        
+        // Clean up
+        delete window[testId];
+      };
+      
+      // Create script content that will call our callback
+      const scriptContent = `
+        try {
+          // Simulate some module initialization
+          const module = { initialized: true };
+          window["${testId}"](true);
+        } catch (error) {
+          console.error("Chunk loading simulation error:", error);
+          window["${testId}"](false);
+        }
+      `;
+      
+      // Create a blob URL for our script
+      const blob = new Blob([scriptContent], { type: 'application/javascript' });
+      script.src = URL.createObjectURL(blob);
+      
+      // Handle load errors
+      script.onerror = function(error) {
+        resultElement.textContent = `Chunk loading simulation error: ${error.message || 'Unknown error'}`;
+        console.error('Chunk loading simulation error:', error);
+        delete window[testId];
+      };
+      
+      // Add the script to the document
+      document.head.appendChild(script);
+    }
+
+    // Check for errors in localStorage
+    function checkLocalStorageErrors() {
+      const errorLogsElement = document.getElementById('js-errors');
+      try {
+        const errorLogs = JSON.parse(localStorage.getItem('error_logs') || '[]');
+        
+        if (errorLogs.length === 0) {
+          errorLogsElement.textContent = 'No error logs found in localStorage';
+          return;
+        }
+        
+        let logOutput = '';
+        errorLogs.forEach((log, index) => {
+          logOutput += `--- Error Log ${index + 1} (${log.timestamp}) ---\n`;
+          logOutput += `Error: ${log.error.name}: ${log.error.message}\n`;
+          if (log.error.stack) {
+            logOutput += `Stack: ${log.error.stack}\n`;
+          }
+          logOutput += `Component: ${log.errorInfo?.componentStack || 'Unknown'}\n`;
+          logOutput += `User Agent: ${log.userAgent}\n`;
+          logOutput += `URL: ${log.url}\n`;
+          logOutput += `Online: ${log.isOnline}\n\n`;
+        });
+        
+        errorLogsElement.textContent = logOutput;
+      } catch (error) {
+        errorLogsElement.textContent = `Error reading localStorage: ${error.message}`;
+        console.error('Error reading localStorage:', error);
+      }
+    }
+
+    // Clear error logs from localStorage
+    function clearErrorLogs() {
+      try {
+        localStorage.removeItem('error_logs');
+        document.getElementById('js-errors').textContent = 'Error logs cleared from localStorage';
+      } catch (error) {
+        console.error('Error clearing localStorage:', error);
+        document.getElementById('js-errors').textContent = `Error clearing localStorage: ${error.message}`;
+      }
+    }
+
+    // Test API endpoints
+    async function testApiEndpoints() {
+      const resultsElement = document.getElementById('network-results');
+      resultsElement.textContent = 'Testing API endpoints...';
+      
+      const endpoints = [
+        { name: 'Health Check', url: '/api/health' },
+        { name: 'Notes', url: '/api/notes' }
+      ];
+      
+      try {
+        const results = await Promise.all(endpoints.map(async (endpoint) => {
+          const result = await checkUrl(endpoint.url, 'GET');
+          return { ...endpoint, ...result };
+        }));
+        
+        let output = '';
+        results.forEach(result => {
+          output += `${result.name}: ${result.ok ? 'OK' : 'Failed'} (${result.status || 'Error'})\n`;
+          if (!result.ok && result.error) {
+            output += `  Error: ${result.error}\n`;
+          }
+        });
+        
+        resultsElement.textContent = output;
+      } catch (error) {
+        resultsElement.textContent = `Error testing API endpoints: ${error.message}`;
+        console.error('Error testing API endpoints:', error);
+      }
+    }
+
+    // Test CORS
+    async function testCors() {
+      const resultsElement = document.getElementById('network-results');
+      resultsElement.textContent = 'Testing CORS...';
+      
+      try {
+        // Test a simple CORS request to a known endpoint
+        const response = await fetch('https://httpbin.org/get', {
+          method: 'GET',
+          mode: 'cors'
+        });
+        
+        if (response.ok) {
+          resultsElement.textContent = 'CORS test successful';
+        } else {
+          resultsElement.textContent = `CORS test failed: ${response.status} ${response.statusText}`;
+        }
+      } catch (error) {
+        resultsElement.textContent = `CORS test error: ${error.message}`;
+        console.error('CORS test error:', error);
+      }
+    }
+
+    // Unregister service worker
+    async function unregisterServiceWorker() {
+      const resultsElement = document.getElementById('fix-results');
+      resultsElement.textContent = 'Attempting to unregister service worker...';
+      
+      try {
+        if ('serviceWorker' in navigator) {
+          const registrations = await navigator.serviceWorker.getRegistrations();
+          
+          if (registrations.length === 0) {
+            resultsElement.textContent = 'No service workers registered';
+            return;
+          }
+          
+          let output = '';
+          for (const registration of registrations) {
+            const success = await registration.unregister();
+            output += `Unregistered service worker (scope: ${registration.scope}): ${success ? 'Success' : 'Failed'}\n`;
+          }
+          
+          resultsElement.textContent = output;
+          diagnosticData.fixes.push({
+            type: 'service-worker-unregister',
+            timestamp: new Date().toISOString(),
+            result: output
+          });
+        } else {
+          resultsElement.textContent = 'Service Worker API not available in this browser';
+        }
+      } catch (error) {
+        resultsElement.textContent = `Error unregistering service worker: ${error.message}`;
+        console.error('Error unregistering service worker:', error);
+      }
+    }
+
+    // Clear all caches
+    async function clearAllCaches() {
+      const resultsElement = document.getElementById('fix-results');
+      resultsElement.textContent = 'Clearing all caches...';
+      
+      try {
+        if ('caches' in window) {
+          const cacheNames = await window.caches.keys();
+          
+          if (cacheNames.length === 0) {
+            resultsElement.textContent = 'No caches found';
+            return;
+          }
+          
+          let output = '';
+          for (const cacheName of cacheNames) {
+            await window.caches.delete(cacheName);
+            output += `Deleted cache: ${cacheName}\n`;
+          }
+          
+          resultsElement.textContent = output;
+          diagnosticData.fixes.push({
+            type: 'clear-caches',
+            timestamp: new Date().toISOString(),
+            result: output
+          });
+        } else {
+          resultsElement.textContent = 'Cache API not available in this browser';
+        }
+      } catch (error) {
+        resultsElement.textContent = `Error clearing caches: ${error.message}`;
+        console.error('Error clearing caches:', error);
+      }
+    }
+
+    // Reset localStorage
+    function resetLocalStorage() {
+      const resultsElement = document.getElementById('fix-results');
+      
+      try {
+        // Save the keys before clearing
+        const keys = Object.keys(localStorage);
+        localStorage.clear();
+        
+        resultsElement.textContent = `LocalStorage reset. Cleared ${keys.length} keys: ${keys.join(', ')}`;
+        diagnosticData.fixes.push({
+          type: 'reset-localStorage',
+          timestamp: new Date().toISOString(),
+          result: `Cleared ${keys.length} keys`
+        });
+      } catch (error) {
+        resultsElement.textContent = `Error resetting localStorage: ${error.message}`;
+        console.error('Error resetting localStorage:', error);
+      }
+    }
+
+    // Hard reload (clear cache)
+    function hardReload() {
+      diagnosticData.fixes.push({
+        type: 'hard-reload',
+        timestamp: new Date().toISOString()
+      });
+      window.location.reload(true);
+    }
+
+    // Get browser information
+    function getBrowserInfo() {
+      const browserInfoElement = document.getElementById('browser-info');
+      
+      const info = {
+        userAgent: navigator.userAgent,
+        platform: navigator.platform,
+        language: navigator.language,
+        cookiesEnabled: navigator.cookieEnabled,
+        online: navigator.onLine,
+        doNotTrack: navigator.doNotTrack,
+        screenWidth: window.screen.width,
+        screenHeight: window.screen.height,
+        pixelRatio: window.devicePixelRatio,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        serviceWorkerSupported: 'serviceWorker' in navigator,
+        cacheApiSupported: 'caches' in window,
+        indexedDBSupported: 'indexedDB' in window,
+        localStorageSupported: typeof localStorage !== 'undefined',
+        sessionStorageSupported: typeof sessionStorage !== 'undefined'
+      };
+      
+      // Add connection info if available
+      if (navigator.connection) {
+        info.connection = {
+          effectiveType: navigator.connection.effectiveType,
+          downlink: navigator.connection.downlink,
+          rtt: navigator.connection.rtt,
+          saveData: navigator.connection.saveData
+        };
+      }
+      
+      // Add hardware info if available
+      if (navigator.hardwareConcurrency) {
+        info.hardwareConcurrency = navigator.hardwareConcurrency;
+      }
+      
+      if (navigator.deviceMemory) {
+        info.deviceMemory = navigator.deviceMemory;
+      }
+      
+      browserInfoElement.textContent = JSON.stringify(info, null, 2);
+      diagnosticData.browserInfo = info;
+      
+      return info;
+    }
+
+    // Download diagnostic report
+    function downloadReport() {
+      try {
+        const reportBlob = new Blob([JSON.stringify(diagnosticData, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(reportBlob);
+        
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `brainwavesync-diagnostic-${new Date().toISOString().replace(/[:.]/g, '-')}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      } catch (error) {
+        console.error('Error downloading report:', error);
+        alert(`Error downloading report: ${error.message}`);
+      }
+    }
+
+    // Tab switching functionality
+    function setupTabs() {
+      const tabs = document.querySelectorAll('.tab');
+      const tabContents = document.querySelectorAll('.tab-content');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const tabId = tab.getAttribute('data-tab');
+          
+          // Update active tab
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          
+          // Update active content
+          tabContents.forEach(content => {
+            content.classList.remove('active');
+            if (content.id === tabId) {
+              content.classList.add('active');
+            }
+          });
+        });
+      });
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set up tabs
+      setupTabs();
+      
+      // Get browser info
+      getBrowserInfo();
+      
+      // Check resources on load
+      checkResources();
+
+      // Set up button handlers
+      document.getElementById('reload-app').addEventListener('click', () => {
+        window.location.href = '/';
+      });
+
+      document.getElementById('check-resources').addEventListener('click', () => {
+        checkResources();
+      });
+
+      document.getElementById('download-report').addEventListener('click', () => {
+        downloadReport();
+      });
+
+      document.getElementById('test-api').addEventListener('click', () => {
+        testApiEndpoints();
+      });
+
+      document.getElementById('test-cors').addEventListener('click', () => {
+        testCors();
+      });
+
+      document.getElementById('test-dynamic-import').addEventListener('click', () => {
+        testDynamicImport();
+      });
+
+      document.getElementById('test-chunk-loading').addEventListener('click', () => {
+        testChunkLoading();
+      });
+
+      document.getElementById('check-local-storage').addEventListener('click', () => {
+        checkLocalStorageErrors();
+      });
+
+      document.getElementById('clear-error-logs').addEventListener('click', () => {
+        clearErrorLogs();
+      });
+
+      document.getElementById('fix-service-worker').addEventListener('click', () => {
+        unregisterServiceWorker();
+      });
+
+      document.getElementById('fix-clear-cache').addEventListener('click', () => {
+        clearAllCaches();
+      });
+
+      document.getElementById('fix-reset-storage').addEventListener('click', () => {
+        resetLocalStorage();
+      });
+
+      document.getElementById('fix-reload-clean').addEventListener('click', () => {
+        hardReload();
+      });
+    });
+
+    // Capture unhandled promise rejections
+    window.addEventListener('unhandledrejection', event => {
+      console.error('Unhandled Promise Rejection:', event.reason);
+    });
+
+    // Capture general JavaScript errors
+    window.addEventListener('error', event => {
+      console.error('JavaScript Error:', event.message, 'at', event.filename, 'line', event.lineno);
+    });
+  </script>
+</body>
+</html>

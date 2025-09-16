@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "references": [
+    { "path": "./server" },
+    { "path": "./client" },
+    { "path": "./shared" }
+  ],
+  "include": [],
+  "files": []
+}
